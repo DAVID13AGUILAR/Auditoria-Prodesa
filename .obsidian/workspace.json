@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "F2/2.1/03_detalle-proyecto.md",
+                "file": "F2/2.1/arquitectura-informacion/01_por-que-importa-la-ai.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03_detalle-proyecto"
+              "title": "01_por-que-importa-la-ai"
             }
           },
           {
@@ -194,12 +194,16 @@
       "bases:Crear nueva base": false
     }
   },
-  "active": "12a4d8a17a62a973",
+  "active": "98bb9377010d520c",
   "lastOpenFiles": [
+    "research/H6-patrones-pagina-detalle-proyecto.md",
+    "F2/2.1/03_detalle-proyecto.md",
+    "research/H6-patrones-pagina-detalle-proyecto.md.tmp.4104.f3dd94156bf9",
+    "research/desktop.ini",
+    "research",
     "H-DETALLE-5_DATOS-SCROLL-MOBILE.png",
     "H-DETALLE-5_FALTA-DATOS-MOBILE.png",
     "F2/2.1/01_homepage.md",
-    "F2/2.1/03_detalle-proyecto.md",
     "H-DETALLE-5_SCROLL-DATOS-WEB.png",
     "H-DETALLE-5_FALTAN-DATOS-WEB.png",
     "F2/2.1/02_busqueda-filtros.md.tmp.25592.a58e5f94d676",
@@ -217,7 +221,6 @@
     "H-HOME-10_JILGUERO-DUPLICADO-LINK-CODIGO.png",
     "H-DETALLE-2_JERARQUIA-MOBILE.png",
     "F2/2.1/03_detalle-proyecto.md.tmp.7432.027647968f2c",
-    "H-DETALLE-1_FALLO-JERARQUIA-MOBILE.png",
     "F2/2.1/03_detalle-proyecto.md.tmp.18652.797507ec6e15",
     "F2/2.1/02_busqueda-filtros.md",
     "F2/2.1/arquitectura-informacion/01_por-que-importa-la-ai.md",
@@ -225,10 +228,7 @@
     "F2/2.1/arquitectura-informacion/03_mapa-sitio-propuesto.md",
     "F2/2.1/00_plantilla.md",
     "F2/2.1/06_reporte-ejecutivo-sintesis.md",
-    "F2/2.1/06_reporte-ejecutivo-sintesis.md.tmp.24540.f61861c1b51c",
     "F2/2.1/CONTEXTO-NUEVO-CHAT.md",
-    "F2/2.1/02_busqueda-filtros.md.tmp.22972.08f7e0666297",
-    "F2/2.1/02_busqueda-filtros.md.tmp.25728.966d9d040bb8",
     "F2/2.1/05_inventario-final.md",
     "F2/2.1/04_formulario-contacto.md"
   ]

@@ -1,1 +1,6 @@
-{}
+{
+  "interfaceFontFamily": "",
+  "baseFontSize": 10,
+  "baseFontSizeAction": false,
+  "theme": "obsidian"
+}
