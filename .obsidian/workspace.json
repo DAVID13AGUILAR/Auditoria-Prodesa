@@ -1,0 +1,235 @@
+{
+  "main": {
+    "id": "825ac3aa3ad74a6a",
+    "type": "split",
+    "children": [
+      {
+        "id": "1002bc5f0babf75c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "98bb9377010d520c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "F2/2.1/03_detalle-proyecto.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "03_detalle-proyecto"
+            }
+          },
+          {
+            "id": "5c12c79e36046a17",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "F2/2.1/03_detalle-proyecto.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "03_detalle-proyecto"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "dc56b2dbc63e4087",
+    "type": "split",
+    "children": [
+      {
+        "id": "9a97e8d169473d23",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "12a4d8a17a62a973",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "d3d713de6658a3a3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "b153b05237d8ed02",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "82fd8a34b3267216",
+    "type": "split",
+    "children": [
+      {
+        "id": "ffd4da5b0a13ef77",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8d95ba291af7d773",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes"
+            }
+          },
+          {
+            "id": "a8a82416f60614ed",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes"
+            }
+          },
+          {
+            "id": "8ff7e730e5a29ebf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "bc18fb89ebb8a3ab",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "9c3b1532b4cf02d5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "12a4d8a17a62a973",
+  "lastOpenFiles": [
+    "H-DETALLE-5_DATOS-SCROLL-MOBILE.png",
+    "H-DETALLE-5_FALTA-DATOS-MOBILE.png",
+    "F2/2.1/01_homepage.md",
+    "F2/2.1/03_detalle-proyecto.md",
+    "H-DETALLE-5_SCROLL-DATOS-WEB.png",
+    "H-DETALLE-5_FALTAN-DATOS-WEB.png",
+    "F2/2.1/02_busqueda-filtros.md.tmp.25592.a58e5f94d676",
+    "F2/2.1/03_detalle-proyecto.md.tmp.25592.66ad74d93ca4",
+    "F2/2.1/03_detalle-proyecto.md.tmp.25592.f871c659aa41",
+    "H-DETALLE-3_CTA-MOBILE.png",
+    "H-DETALLE-3_DESCONECTADO-WEB.png",
+    "F2/2.1/03_detalle-proyecto.md.tmp.25944.458d0d82010a",
+    "F2/2.1/03_detalle-proyecto.md.tmp.25944.9b0949e51e36",
+    "F2/2.1/H3C.md",
+    "F2/2.1/H3B.md",
+    "F2/2.1/H3A.md",
+    "Pasted image 20260515232528.png",
+    "H-DETALLE-2_SIN-JERARQUIA-WEB.png",
+    "H-HOME-10_JILGUERO-DUPLICADO-LINK-CODIGO.png",
+    "H-DETALLE-2_JERARQUIA-MOBILE.png",
+    "F2/2.1/03_detalle-proyecto.md.tmp.7432.027647968f2c",
+    "H-DETALLE-1_FALLO-JERARQUIA-MOBILE.png",
+    "F2/2.1/03_detalle-proyecto.md.tmp.18652.797507ec6e15",
+    "F2/2.1/02_busqueda-filtros.md",
+    "F2/2.1/arquitectura-informacion/01_por-que-importa-la-ai.md",
+    "F2/2.1/arquitectura-informacion/02_mapa-sitio-actual.md",
+    "F2/2.1/arquitectura-informacion/03_mapa-sitio-propuesto.md",
+    "F2/2.1/00_plantilla.md",
+    "F2/2.1/06_reporte-ejecutivo-sintesis.md",
+    "F2/2.1/06_reporte-ejecutivo-sintesis.md.tmp.24540.f61861c1b51c",
+    "F2/2.1/CONTEXTO-NUEVO-CHAT.md",
+    "F2/2.1/02_busqueda-filtros.md.tmp.22972.08f7e0666297",
+    "F2/2.1/02_busqueda-filtros.md.tmp.25728.966d9d040bb8",
+    "F2/2.1/05_inventario-final.md",
+    "F2/2.1/04_formulario-contacto.md"
+  ]
+}
