@@ -15,7 +15,7 @@ aliases:
 **Proyecto:** Evaluación de usabilidad prodesa.com
 **Fecha:** Mayo 2026
 **Evaluador:** David Marín
-**Total de hallazgos:** 37
+**Total de hallazgos:** 36 activos (1 eliminado tras validación)
 
 ---
 
@@ -23,43 +23,42 @@ aliases:
 
 | ID | Principio | Sección | Descripción del problema | Severidad | Hipótesis |
 |----|-----------|---------|--------------------------|-----------|-----------|
-| H-HOME-01 | P1 - Visibilidad | Homepage | SPA sin SSR: usuario ve "You need to enable JavaScript" si JS falla. Sin skeleton, sin estado de carga. | 3 🔴 | H3C |
-| H-HOME-02 | P8 - Minimalismo | Homepage / Nav | Doble barra de navegación: una superior (Blog, Proveedores, Administradores) y una principal. Ruido visual, audiencias mezcladas. | 2 🟡 | H3A, H3C |
-| H-HOME-03 | P8 - Minimalismo | Homepage / Nav | "Invertir desde el exterior" comparte nivel con CTAs de conversión del comprador local. Distracción para el 90% del público. | 2 🟡 | H3A |
-| H-HOME-04 | P2 - Mundo real | Homepage / Nav global | Términos "VIS" y "NO VIS" sin definición en el título del sitio y la navegación. Jerga técnica invisible para compradores primerizos. | 3 🔴 | H3A |
-| H-HOME-05 | P4 - Consistencia | Homepage / Footer | Copyright muestra "© 2025 Prodesa" en 2026. Proyecta descuido editorial. | 1 🟢 | — |
-| H-HOME-06 | P9 - Recuperación errores | Homepage / Footer | Botón Google Play apunta a apple.com/store. Link roto para usuarios Android. | 3 🔴 | — |
-| H-HOME-07 | P1 - Visibilidad | Global | Sin breadcrumbs en ninguna página. El usuario no sabe dónde está en la jerarquía del sitio. | 2 🟡 | H3A |
-| H-HOME-08 | P2 - Mundo real | Homepage / Footer | "SAGRILAFT" en el footer sin explicación. Acrónimo regulatorio sin valor para el comprador. | 1 🟢 | — |
-| H-HOME-09 | P6 - Reconocimiento | Homepage / Hero | Ausencia de H1 visible con propuesta de valor clara. El usuario debe inferir qué es y qué ofrece Prodesa. | 2 🟡 | H3B |
-| H-HOME-10 | P4 - Consistencia | Homepage / Footer | Proyecto "Jilguero" duplicado en el footer con la misma URL. Confusión sobre si son proyectos distintos. | 1 🟢 | — |
-| H-FILTROS-01 | P1 - Visibilidad | Listado / Filtros | Sin contador de resultados al aplicar filtros. El usuario no sabe si la acción tuvo efecto. | 3 🔴 | H3A |
-| H-FILTROS-02 | P2 - Mundo real | Listado / Filtros | Filtros "VIS" / "NO VIS" sin tooltip ni explicación. Barrera para compradores primerizos en el punto de búsqueda. | 3 🔴 | H3A |
-| H-FILTROS-03 | P3 - Control usuario | Listado / Filtros | Sin botón "Limpiar filtros" visible. El usuario no puede resetear búsqueda en un clic. | 2 🟡 | H3A |
-| H-FILTROS-04 | P4 - Consistencia | Listado / URLs | Estructura de URLs inconsistente: algunos proyectos tienen `/ciudad/slug`, otros solo `/slug`. | 2 🟡 | H3A |
-| H-FILTROS-05 | P5 - Prevención errores | Listado / Filtros | Sin prevención de combinaciones imposibles (ciudad sin proyectos VIS). El sistema no anticipa ni orienta. | 2 🟡 | H3A |
-| H-FILTROS-06 | P6 - Reconocimiento | Listado / Tarjetas | Información clave (precio, estado, habitaciones) presumiblemente ausente en la superficie de las tarjetas. | 3 🔴 | H3B |
-| H-FILTROS-07 | P7 - Flexibilidad | Listado / Filtros | Sin filtros avanzados (precio, m², habitaciones, fecha de entrega). Solo filtro por ciudad detectado. | 2 🟡 | H3A |
-| H-FILTROS-08 | P4 - Consistencia | Footer / Sitemap | Inconsistencias entre listado de proyectos en homepage vs. página de contacto (nombres y URLs distintos). | 1 🟢 | — |
-| H-FILTROS-09 | P1 - Visibilidad | Listado / SPA | Sin skeleton loader al cambiar filtros. El usuario no sabe que el sistema está procesando. | 2 🟡 | H3C |
-| H-DETALLE-01 | P8 - Minimalismo | Detalle proyecto / Hero | Meta-título del proyecto mezcla localización, tipo de subsidio y nombre. Si refleja el H1, el foco del CTA se pierde. | 2 🟡 | H3B |
-| H-DETALLE-02 | P6 - Reconocimiento | Detalle proyecto | Precio no detectado en la meta-descripción ni presumiblemente en el primer fold. La información más decisiva no es visible de inmediato. | 3 🔴 | H3B |
-| H-DETALLE-03 | P1 + P2 | Detalle proyecto / CTA | CTA genérico ("Solicitar información" o similar). El usuario no sabe qué pasará al hacer clic: ¿formulario, llamada, WhatsApp? | 3 🔴 | H3B |
-| H-DETALLE-04 | P4 - Consistencia | Detalle proyecto / URLs | URL de Ágora redirige de `/agora` a `/cali/agora`. Inconsistencia en el patrón de URLs entre proyectos. | 2 🟡 | H3A |
-| H-DETALLE-05 | P6 - Reconocimiento | Detalle proyecto / Ficha | Ficha técnica (m², hab., fecha de entrega, unidades disponibles) presumiblemente no visible en el primer fold. | 2 🟡 | H3B |
-| H-DETALLE-06 | P4 - Consistencia | Múltiples proyectos | Sin plantilla de diseño estandarizada entre proyectos. Cada uno puede verse distinto. | 2 🟡 | H3A |
-| H-DETALLE-07 | P3 - Control usuario | Detalle proyecto / Nav | Al volver al listado desde el detalle, los filtros pueden perderse. El usuario pierde el contexto de su búsqueda. | 2 🟡 | H3A |
-| H-DETALLE-08 | P1 - Visibilidad | Detalle proyecto | Estado del proyecto (en venta / preventa / agotado) no detectado en metadatos. Información crítica no visible. | 3 🔴 | H3B |
-| H-DETALLE-09 | P10 - Ayuda | Detalle proyecto | "Subsidio disponible" mencionado sin contexto sobre qué subsidio, quién aplica ni cómo acceder. | 2 🟡 | H3A |
-| H-FORM-01 | P1 - Visibilidad | Formulario / Post-envío | Sin confirmación post-envío verificada. El usuario no sabe qué pasará después de enviar. | 3 🔴 | H3B |
-| H-FORM-02 | P2 - Mundo real | Formulario / Labels | Labels del formulario presumiblemente técnicos o poco claros para compradores primerizos. | 2 🟡 | — |
-| H-FORM-03 | P5 - Prevención errores | Formulario / Validación | Validación probablemente post-submit, no inline. El usuario descubre errores solo al enviar. | 3 🔴 | H3C |
-| H-FORM-04 | P9 - Recuperación errores | Formulario / Mensajes | Mensajes de error presumiblemente genéricos ("Campo requerido"). No orientan la corrección. | 2 🟡 | — |
-| H-FORM-05 | P2 - Mundo real | Footer / Teléfonos | Tres líneas de contacto con el mismo número de teléfono. Confuso e inconsistente. | 2 🟡 | — |
-| H-FORM-06 | P3 - Control usuario | Formulario / Canal | Sin opción para elegir canal de respuesta (WhatsApp / llamada / email). El sistema impone el canal. | 2 🟡 | H3B |
-| H-FORM-07 | P8 - Minimalismo | Formulario / Contexto | Formulario genérico sin precargar el proyecto de interés. El lead llega al CRM sin contexto del proyecto. | 2 🟡 | H3B |
-| H-FORM-08 | P10 - Ayuda | Formulario / FAQ | FAQ del sitio no está integrada al flujo del formulario ni de la página de detalle. | 1 🟢 | — |
-| H-FORM-09 | P1 - Visibilidad | Global / WhatsApp | Sin botón flotante de WhatsApp en el sitio. Canal de mayor conversión en el mercado colombiano ausente. | 3 🔴 | H3B, H3C |
+| [[01_homepage\|H-HOME-01]] | P1 - Visibilidad | [[01_homepage\|Homepage]] | SPA sin SSR: pantalla en blanco con *"You need to enable JavaScript"* mientras carga JS. Sin skeleton loader. Crítico en mobile con conexiones lentas. | 3 🔴 | [[H3C]] |
+| [[01_homepage\|H-HOME-02]] | P8 - Minimalismo | Homepage / Nav | Doble barra de navegación mezcla audiencias internas (Blog, Proveedores, Administradores) con compradores. Ruido visual que distrae del flujo de conversión. | 2 🟡 | [[H3A]], [[H3C]] |
+| [[01_homepage\|H-HOME-03]] | P8 - Minimalismo | Homepage / Nav | "Invertir desde el exterior" comparte nivel jerárquico con CTAs de conversión. Distracción para el 90% del público objetivo. | 2 🟡 | [[H3A]] |
+| [[01_homepage\|H-HOME-04]] | P2 - Mundo real | Homepage / Nav global | Badges "VIS" y "VIP" sin definición ni tooltip en tarjetas, descripción y navegación. Barrera de entrada activa para compradores primerizos. Conecta con [[02_busqueda-filtros\|H-FILTROS-02]]. | 3 🔴 | [[H3A]] |
+| [[01_homepage\|H-HOME-05]] | P4 - Consistencia | Homepage / Footer | Copyright muestra "© 2025 Prodesa" en 2026. Parte del patrón de gobernanza de contenidos con [[01_homepage\|H-HOME-10]], [[02_busqueda-filtros\|H-FILTROS-08]] y [[04_formulario-contacto\|H-FORM-05]]. | 1 🟢 | — |
+| [[01_homepage\|H-HOME-06]] | P9 - Recuperación errores | Homepage / Footer | Botón Google Play apunta a apple.com/store. Link roto para Android — 70% del mercado colombiano. | 3 🔴 | — |
+| [[01_homepage\|H-HOME-07]] | P1 - Visibilidad | Global | Sin breadcrumbs en ninguna página. El usuario no sabe en qué nivel de la jerarquía del sitio se encuentra. | 2 🟡 | [[H3A]] |
+| [[01_homepage\|H-HOME-08]] | P2 - Mundo real | Homepage / Footer | "SAGRILAFT" en footer sin explicación ni link — elemento no interactivo sin valor para el comprador. Severidad ajustada de 1 a 2 tras confirmación. | 2 🟡 | — |
+| [[01_homepage\|H-HOME-09]] | P6 - Reconocimiento | Homepage / Hero | Hero sin H1 ni propuesta de valor visible. El usuario debe inferir qué es y qué ofrece Prodesa. | 2 🟡 | [[H3B]] |
+| [[01_homepage\|H-HOME-10]] | P4 - Consistencia | Homepage / Footer | "Proyecto de vivienda Jilguero" duplicado en footer con la misma URL. Parte del patrón de gobernanza de contenidos. | 1 🟢 | — |
+| [[02_busqueda-filtros\|H-FILTROS-01]] | P1 - Visibilidad | Listado / Filtros | Sin contador de resultados al aplicar filtros. El usuario no sabe cuántos proyectos corresponden a su búsqueda ni si el filtro tuvo efecto. | 3 🔴 | [[H3A]] |
+| [[02_busqueda-filtros\|H-FILTROS-02]] | P2 - Mundo real | Listado / Filtros | Filtros "VIS / NO VIS / VIP" sin tooltip ni definición. Barrera activa para compradores primerizos en el punto de búsqueda. Conecta con [[01_homepage\|H-HOME-04]]. | 3 🔴 | [[H3A]] |
+| [[02_busqueda-filtros\|H-FILTROS-03]] | P3 - Control usuario | Listado / Filtros | "Limpiar filtros" es texto plano (no `<button>`) y reinicia a valores default ($140M–$2.2B, 32–235m²) en lugar de vaciar — comportamiento engañoso sin aviso. Conecta con [[03_detalle-proyecto\|H-DETALLE-07]]. | 2 🟡 | [[H3A]] |
+| ~~H-FILTROS-04~~ | ~~P4 - Consistencia~~ | ~~Listado / URLs~~ | **Eliminado tras validación.** URLs son consistentes — patrón `/proyecto-vivienda/[ciudad]/[slug]`. El redirect de Ágora es comportamiento correcto (URL canónica). | — | — |
+| [[02_busqueda-filtros\|H-FILTROS-05]] | P5 - Prevención errores | Listado / Filtros | Empty state invisible al filtrar sin resultados: mensaje en esquina inferior derecha fuera de la jerarquía visual. Sin orientación ni CTA para ampliar búsqueda. | 2 🟡 | [[H3A]] |
+| [[02_busqueda-filtros\|H-FILTROS-06]] | P6 - Reconocimiento + P4 - Consistencia | Listado / Tarjetas | Precio con asterisco ambiguo e inconsistente entre tarjetas (VIP indexado a SMLMV vs. precio fijo). Sin estado del proyecto visible. Revisado de 3 a 2 — el precio existe, el problema es la ambigüedad. | 2 🟡 | [[H3B]] |
+| [[02_busqueda-filtros\|H-FILTROS-07]] | P4 - Consistencia | Listado / Filtros | Filtro VIS/NO VIS/VIP solo disponible en mobile, ausente en web. Valores default del panel visualmente indistinguibles de filtros activos. | 2 🟡 | [[H3A]] |
+| [[02_busqueda-filtros\|H-FILTROS-08]] | P4 - Consistencia | Footer / Sitemap | "Proyecto de vivienda Jilguero" duplicado en footer — misma entrada dos veces consecutivas. | 1 🟢 | — |
+| [[02_busqueda-filtros\|H-FILTROS-09]] | P1 - Visibilidad | Listado / SPA | Spinner de carga con delay perceptible + al cargar resultados el usuario debe hacer scroll manual al listado. Validado en web y mobile con Slow 4G. | 2 🟡 | [[H3C]] |
+| [[03_detalle-proyecto\|H-DETALLE-01]] | P8 - Minimalismo + P6 - Reconocimiento | Detalle proyecto / Hero | H1 redundante ("Proyecto de Vivienda [Nombre]"), precio visualmente domina sobre el nombre, "Déjanos tus datos" duplica el formulario visible en desktop, "Agenda tu cita" pide correo innecesariamente. Validado en Ágora y Mirla — desktop y mobile. | 2 🟡 | [[H3B]] |
+| [[03_detalle-proyecto\|H-DETALLE-02]] | P6 - Reconocimiento + P8 - Minimalismo | Detalle proyecto / Hero | Precio y área con idéntico peso visual — mismo naranja, mismo tamaño. El listado mobile diferencia correctamente; el detalle no. Revisado de 3 a 2 — el precio existe, el problema es la jerarquía. | 2 🟡 | [[H3B]] |
+| [[03_detalle-proyecto\|H-DETALLE-03]] | P8 - Minimalismo + P3 - Control usuario | Detalle proyecto / CTA | CTAs en "Acerca del proyecto" son "Descargar brochure" y "Compartir" — sin CTA de contacto directo. En desktop el formulario está en columna separada, desconectado del flujo de lectura. Conecta con [[04_formulario-contacto\|H-FORM-01]] y [[04_formulario-contacto\|H-FORM-09]]. | 3 🔴 | [[H3B]] |
+| [[03_detalle-proyecto\|H-DETALLE-05]] | P6 - Reconocimiento + P1 - Visibilidad | Detalle proyecto / Ficha | Datos clave (habitaciones, m², precio por tipología) requieren scroll — no están en el hero. Fecha estimada de entrega ausente en toda la página. | 2 🟡 | [[H3B]] |
+| [[03_detalle-proyecto\|H-DETALLE-06]] | P4 - Consistencia | Múltiples proyectos | 6 inconsistencias concretas validadas en Pietra vs. Orizzo: galería (2 vs. 5 tabs), brochure, lista de incluidos, mapa, CTAs de contacto y proyectos similares. Transversal a desktop y mobile. | 2 🟡 | [[H3A]] |
+| [[03_detalle-proyecto\|H-DETALLE-07]] | P3 - Control usuario | Detalle proyecto / Nav | Al regresar al listado desde el detalle, los filtros se pierden. El usuario debe reconfigurar su búsqueda desde cero. Conecta con [[02_busqueda-filtros\|H-FILTROS-03]] y [[04_formulario-contacto\|H-FORM-07]]. | 2 🟡 | [[H3A]] |
+| [[03_detalle-proyecto\|H-DETALLE-08]] | P1 - Visibilidad | Detalle proyecto | Sin chip de estado del proyecto (preventa / en construcción / listo para entrega / agotado) en el hero ni en las tarjetas del listado. | 3 🔴 | [[H3B]] |
+| [[03_detalle-proyecto\|H-DETALLE-09]] | P10 - Ayuda | Detalle proyecto | "Subsidio disponible" en la descripción sin indicar tipo, monto ni requisitos. Información enterrada en prosa en lugar de contextualizada junto al precio. Conecta con [[04_formulario-contacto\|H-FORM-08]]. | 2 🟡 | [[H3A]] |
+| [[04_formulario-contacto\|H-FORM-01]] | P1 - Visibilidad | Formulario / Post-envío | Confirmación post-envío existe pero: muestra el correo del usuario en pantalla (privacidad), no indica canal ni tiempo de respuesta, sin CTA de respaldo. Revisado de 3 a 2 — la confirmación existe. Conecta con [[03_detalle-proyecto\|H-DETALLE-03]]. | 2 🟡 | [[H3B]] |
+| [[04_formulario-contacto\|H-FORM-02]] | P2 - Mundo real + P8 - Minimalismo | Formulario / Campos | 6 campos obligatorios incluyendo tipo y número de documento — innecesarios en primer contacto. Capitalización inconsistente en labels ("Tipo De Documento"). Mayor fricción en mobile. Conecta con [[01_homepage\|H-HOME-04]] y [[02_busqueda-filtros\|H-FILTROS-02]]. | 2 🟡 | [[H3B]] |
+| [[04_formulario-contacto\|H-FORM-03]] | P5 - Prevención errores | Formulario / Validación | Validación 100% post-submit confirmada. Teléfono inválido no genera error — pasa al CRM sin validación de formato colombiano. En web los errores salen del viewport y obligan a scroll. Conecta con [[04_formulario-contacto\|H-FORM-04]]. | 3 🔴 | [[H3C]] |
+| [[04_formulario-contacto\|H-FORM-04]] | P9 - Recuperación errores | Formulario / Mensajes | Mensajes de error "RELLENA ESTE CAMPO OBLIGATORIO." — todo en mayúsculas, idéntico para todos los campos, sin orientación. Teléfono inválido no recibe ningún mensaje. | 2 🟡 | — |
+| [[04_formulario-contacto\|H-FORM-05]] | P2 - Mundo real + P4 - Consistencia | Footer / Teléfonos | Tres de cuatro líneas de contacto tienen el mismo número (+573241000060). Cuarto ejemplo del patrón de gobernanza de contenidos junto a [[01_homepage\|H-HOME-05]], [[01_homepage\|H-HOME-10]] y [[02_busqueda-filtros\|H-FILTROS-08]]. | 2 🟡 | — |
+| [[04_formulario-contacto\|H-FORM-06]] | P3 - Control usuario + P4 - Consistencia | /contactanos / Canales | Canales existen (WhatsApp, Teams, callback) pero: "Agenda tu cita en sala" lleva a Teams (nombre engañoso), reCAPTCHA en "Asesoría inmediata" reduce conversión hasta 40%, formularios inconsistentes entre canales. | 2 🟡 | [[H3B]] |
+| [[04_formulario-contacto\|H-FORM-07]] | P8 - Minimalismo | Detalle proyecto / Formulario | "Déjanos tus datos" hace scroll al formulario embebido. El formulario no transmite el proyecto al CRM aunque la URL lo indica. Conecta con [[03_detalle-proyecto\|H-DETALLE-03]] y [[03_detalle-proyecto\|H-DETALLE-07]]. | 2 🟡 | [[H3B]] |
+| [[04_formulario-contacto\|H-FORM-08]] | P10 - Ayuda | /contactanos / FAQ | Sin FAQ ni enlace a preguntas frecuentes en /contactanos. Después de los canales solo aparecen CTAs de acción. Conecta con [[03_detalle-proyecto\|H-DETALLE-09]]. | 1 🟢 | — |
+| [[04_formulario-contacto\|H-FORM-09]] | P1 - Visibilidad + P4 - Consistencia | Global / WhatsApp | WhatsApp existe y funciona en la sticky del detalle de proyecto. Ausente en homepage y listado — cobertura parcial del canal de mayor conversión. Revisado de 3 a 2. Conecta con [[03_detalle-proyecto\|H-DETALLE-01]] y [[04_formulario-contacto\|H-FORM-01]]. | 2 🟡 | [[H3B]], [[H3C]] |
 
 ---
 
@@ -67,10 +66,13 @@ aliases:
 
 | Severidad | Cantidad | Porcentaje |
 |-----------|----------|------------|
-| 🔴 Crítico (3) | 13 | 35% |
-| 🟡 Importante (2) | 19 | 51% |
-| 🟢 Menor (1) | 5 | 14% |
-| **Total** | **37** | |
+| 🔴 Crítico (3) | 8 | 22% |
+| 🟡 Importante (2) | 24 | 67% |
+| 🟢 Menor (1) | 4 | 11% |
+| **Total activos** | **36** | |
+| ~~Eliminados~~ | ~~1~~ | ~~H-FILTROS-04~~ |
+
+*Revisiones de severidad aplicadas tras validación visual: H-HOME-08 (1→2), H-FILTROS-06 (3→2), H-DETALLE-02 (3→2), H-FORM-01 (3→2), H-FORM-09 (3→2).*
 
 ---
 
@@ -93,46 +95,49 @@ aliases:
 
 ## Agrupación por Categoría
 
-### 🧭 Navegación y Arquitectura (H3A)
-H-HOME-02 · H-HOME-03 · H-HOME-07 · H-FILTROS-03 · H-FILTROS-04 · H-FILTROS-05 · H-FILTROS-07 · H-DETALLE-04 · H-DETALLE-06 · H-DETALLE-07 · H-DETALLE-09
+### 🧭 Navegación y Arquitectura ([[H3A]])
+[[01_homepage|H-HOME-02]] · [[01_homepage|H-HOME-03]] · [[01_homepage|H-HOME-07]] · [[02_busqueda-filtros|H-FILTROS-03]] · [[02_busqueda-filtros|H-FILTROS-05]] · [[02_busqueda-filtros|H-FILTROS-07]] · [[03_detalle-proyecto|H-DETALLE-06]] · [[03_detalle-proyecto|H-DETALLE-07]] · [[03_detalle-proyecto|H-DETALLE-09]]
 
-### 📝 Contenido y Copy (H3A, H3B)
-H-HOME-04 · H-HOME-08 · H-HOME-09 · H-FILTROS-02 · H-DETALLE-01 · H-DETALLE-09 · H-FORM-02
+### 📝 Contenido y Copy ([[H3A]], [[H3B]])
+[[01_homepage|H-HOME-04]] · [[01_homepage|H-HOME-08]] · [[01_homepage|H-HOME-09]] · [[02_busqueda-filtros|H-FILTROS-02]] · [[03_detalle-proyecto|H-DETALLE-01]] · [[03_detalle-proyecto|H-DETALLE-09]] · [[04_formulario-contacto|H-FORM-02]]
 
-### 🎯 CTAs y Conversión (H3B)
-H-HOME-09 · H-FILTROS-06 · H-DETALLE-02 · H-DETALLE-03 · H-DETALLE-05 · H-DETALLE-08 · H-FORM-01 · H-FORM-06 · H-FORM-09
+### 🎯 CTAs y Conversión ([[H3B]])
+[[01_homepage|H-HOME-09]] · [[02_busqueda-filtros|H-FILTROS-06]] · [[03_detalle-proyecto|H-DETALLE-02]] · [[03_detalle-proyecto|H-DETALLE-03]] · [[03_detalle-proyecto|H-DETALLE-05]] · [[03_detalle-proyecto|H-DETALLE-08]] · [[04_formulario-contacto|H-FORM-01]] · [[04_formulario-contacto|H-FORM-06]] · [[04_formulario-contacto|H-FORM-09]]
 
-### 📋 Formularios y Feedback (P5, P9)
-H-FORM-03 · H-FORM-04 · H-FORM-05 · H-FORM-07 · H-FORM-08
+### 📋 Formularios y Contacto (P5, P9)
+[[04_formulario-contacto|H-FORM-03]] · [[04_formulario-contacto|H-FORM-04]] · [[04_formulario-contacto|H-FORM-05]] · [[04_formulario-contacto|H-FORM-06]] · [[04_formulario-contacto|H-FORM-07]] · [[04_formulario-contacto|H-FORM-08]]
 
 ### ⚙️ Feedback del Sistema (P1)
-H-HOME-01 · H-FILTROS-01 · H-FILTROS-09 · H-FORM-01 · H-FORM-03
+[[01_homepage|H-HOME-01]] · [[02_busqueda-filtros|H-FILTROS-01]] · [[02_busqueda-filtros|H-FILTROS-09]] · [[04_formulario-contacto|H-FORM-01]] · [[04_formulario-contacto|H-FORM-03]]
+
+### 🔄 Gobernanza de Contenidos (patrón sistémico)
+[[01_homepage|H-HOME-05]] · [[01_homepage|H-HOME-10]] · [[02_busqueda-filtros|H-FILTROS-08]] · [[04_formulario-contacto|H-FORM-05]]
 
 ### 🐛 Errores técnicos
-H-HOME-06 · H-HOME-10 · H-FILTROS-08
+[[01_homepage|H-HOME-06]] · [[03_detalle-proyecto|H-DETALLE-04]] *(eliminado)*
 
 ---
 
 ## 🏆 Top 3 Hallazgos Críticos — Impacto en Conversión
 
-### #1 — H-FORM-09: Ausencia de botón WhatsApp (Severidad 3)
-**Por qué es el más crítico:** WhatsApp es el canal de comunicación dominante en Colombia para decisiones de compra de alto valor. La ausencia de un botón flotante de WhatsApp contextualizado por proyecto representa la pérdida del canal de conversión de menor fricción. En el mercado de vivienda colombiano, el comprador promedio prefiere iniciar la conversación por WhatsApp antes de hacer una llamada o llenar un formulario. Este hallazgo solo impacta directamente en H3B.
+### #1 — [[03_detalle-proyecto|H-DETALLE-03]]: Sin CTA de contacto directo en el momento de mayor intención (Severidad 3)
+**Por qué es el más crítico:** La página de detalle es el punto de mayor intención de compra del usuario. Los únicos CTAs disponibles en la sección "Acerca del proyecto" son "Descargar brochure" y "Compartir" — ninguno conecta directamente con un asesor. El usuario que terminó de leer la descripción motivado para actuar no tiene canal de conversión disponible en ese contexto. Conecta con [[04_formulario-contacto|H-FORM-01]] (confirmación incompleta) y [[04_formulario-contacto|H-FORM-09]] (WhatsApp ausente en páginas de entrada).
 
-**Relación con hipótesis:** H3B ✅ · H3C ✅
-
----
-
-### #2 — H-DETALLE-03: CTA ambiguo en página de detalle (Severidad 3)
-**Por qué es el segundo más crítico:** La página de detalle de proyecto es el momento de mayor intención de compra del usuario. Un CTA genérico como "Solicitar información" o "Me interesa" sin indicar canal, tiempo de respuesta ni compromiso genera parálisis por incertidumbre. El usuario que no sabe qué pasará al hacer clic, no hace clic. Este es el punto de conversión más valorado y el más vulnerable.
-
-**Relación con hipótesis:** H3B ✅ (confirmación directa)
+**Relación con hipótesis:** [[H3B]] ✅ (confirmación directa)
 
 ---
 
-### #3 — H-HOME-04 + H-FILTROS-02: Jerga técnica "VIS/NO VIS" sin explicación (Severidad 3)
-**Por qué es el tercero más crítico:** "VIS" y "NO VIS" aparecen en el título del sitio, en el nav y en los filtros de búsqueda — los tres puntos de mayor visibilidad del sitio. Para el comprador primerizo (segmento principal de Prodesa), este vocabulario es una barrera de entrada inmediata. Un usuario que no entiende si puede comprar VIS o No VIS no avanzará en el funnel. El problema se repite en dos secciones distintas lo que amplifica su impacto.
+### #2 — [[03_detalle-proyecto|H-DETALLE-08]]: Sin estado del proyecto visible (Severidad 3)
+**Por qué es el segundo más crítico:** El estado del proyecto (preventa / en construcción / listo para entrega / agotado) determina directamente si el proyecto es relevante para el comprador en este momento. Su ausencia genera leads de menor calidad (el asesor aclara lo que la página debería responder), expectativas incorrectas y frustración tardía cuando el usuario descubre que el proyecto no aplica a su plan de vida. Es la información más crítica después del precio y no está en ningún punto del sitio.
 
-**Relación con hipótesis:** H3A ✅ (confirmación directa)
+**Relación con hipótesis:** [[H3B]] ✅ (confirmación directa)
+
+---
+
+### #3 — [[01_homepage|H-HOME-04]] + [[02_busqueda-filtros|H-FILTROS-02]]: Jerga "VIS / VIP / NO VIS" sin definición en todo el funnel (Severidad 3)
+**Por qué es el tercero más crítico:** "VIS", "VIP" y "NO VIS" aparecen sin definición en la navegación global, en los badges de las tarjetas, en los filtros de búsqueda y en los labels del formulario — los cuatro puntos más visibles del funnel. Para el comprador primerizo (segmento principal de Prodesa), esta terminología es una barrera de entrada que actúa antes de que el usuario vea cualquier proyecto. Un usuario que no entiende si puede comprar VIS no avanzará en el funnel. El problema atraviesa cuatro secciones distintas de forma sistémica.
+
+**Relación con hipótesis:** [[H3A]] ✅ (confirmación directa)
 
 ---
 
@@ -142,30 +147,22 @@ H-HOME-06 · H-HOME-10 · H-FILTROS-08
 |-----------|-------------|---------------------------|-----------|
 | [[H3A]] — Arquitectura de información | La arquitectura y navegación del sitio dificultan que el usuario encuentre el proyecto correcto | H-HOME-02, H-HOME-04, H-HOME-07, H-FILTROS-01, H-FILTROS-02, H-FILTROS-03, H-FILTROS-04, H-FILTROS-05, H-FILTROS-07, H-DETALLE-04, H-DETALLE-06, H-DETALLE-07 | ✅ **Confirmada** — 12 hallazgos respaldan esta hipótesis |
 | [[H3B]] — CTAs ambiguos o insuficientes | Los CTAs no comunican claramente la acción ni el canal, reduciendo la conversión | H-HOME-09, H-FILTROS-06, H-DETALLE-02, H-DETALLE-03, H-DETALLE-05, H-DETALLE-08, H-FORM-01, H-FORM-06, H-FORM-09 | ✅ **Confirmada** — 9 hallazgos respaldan esta hipótesis |
-| [[H3C]] — Experiencia mobile inferior | La versión mobile tiene problemas adicionales que generan mayor abandono | H-HOME-01, H-HOME-02, H-FILTROS-09, H-FORM-03, H-FORM-09 | ✅ **Sospecha confirmada parcialmente** — 5 hallazgos estructurales; requiere validación con capturas mobile |
+| [[H3C]] — Experiencia mobile inferior | La versión mobile tiene problemas adicionales que generan mayor abandono | H-HOME-01, H-HOME-02, H-FILTROS-07, H-FILTROS-09, H-DETALLE-01, H-DETALLE-02, H-DETALLE-06, H-FORM-02, H-FORM-03, H-FORM-09 | ✅ **Confirmada** — validación con capturas mobile en formulario, detalle de proyecto y filtros confirma que la versión mobile tiene fricción adicional en múltiples puntos del funnel |
 
 ---
 
-## Pendientes de Validación Visual
+## Estado de validación visual
 
-Los siguientes hallazgos requieren capturas del sitio renderizado en browser (desktop + mobile) para ser incluidos en el informe final con evidencia:
+Todos los hallazgos han sido validados con capturas del sitio renderizado en desktop y mobile.
 
-| Prioridad | ID | Sección | Qué capturar |
-|-----------|-----|---------|--------------|
-| Alta | H-HOME-01 | Global | Mensaje de error con JS desactivado |
-| Alta | H-HOME-02 | Navbar | Doble barra de navegación desktop y mobile |
-| Alta | H-HOME-04 | Navbar | Términos VIS/NO VIS sin tooltip |
-| Alta | H-HOME-06 | Footer | Botón Google Play apuntando a Apple Store |
-| Alta | H-FILTROS-01 | Listado | Panel de filtros sin contador de resultados |
-| Alta | H-FILTROS-06 | Tarjetas | Tarjeta de proyecto sin precio visible |
-| Alta | H-DETALLE-02 | Detalle | Primer fold sin precio visible |
-| Alta | H-DETALLE-03 | Detalle | CTA ambiguo en página de proyecto |
-| Alta | H-DETALLE-08 | Detalle | Ausencia de estado del proyecto |
-| Alta | H-FORM-01 | Formulario | Pantalla post-envío (o ausencia de ella) |
-| Alta | H-FORM-03 | Formulario | Validación post-submit de campos |
-| Alta | H-FORM-09 | Global | Ausencia de botón WhatsApp flotante |
-| Media | H-HOME-07 | Global | Ausencia de breadcrumbs en proyecto y listado |
-| Media | H-DETALLE-05 | Detalle | Ficha técnica no visible sin scroll |
+| ID | Estado | Proyectos / páginas validadas |
+|----|--------|-------------------------------|
+| [[01_homepage\|H-HOME-01 a H-HOME-10]] | ✅ Todos validados | Homepage desktop y mobile |
+| [[02_busqueda-filtros\|H-FILTROS-01 a H-FILTROS-09]] | ✅ Todos validados | `/proyecto-vivienda` desktop y mobile |
+| [[03_detalle-proyecto\|H-DETALLE-01 a H-DETALLE-09]] | ✅ Todos validados | Ágora, Mirla, Céntrico, Pietra, Orizzo — desktop y mobile |
+| [[04_formulario-contacto\|H-FORM-01 a H-FORM-09]] | ✅ Todos validados | `/contactanos` y formulario embebido — desktop y mobile |
+
+*H-FILTROS-04 eliminado tras validación — URLs son consistentes.*
 
 ---
 
