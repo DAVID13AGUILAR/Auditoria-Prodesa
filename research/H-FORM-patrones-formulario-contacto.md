@@ -1,4 +1,6 @@
 ---
+status: completado
+created: 2026-05-20
 tags:
   - research
   - ux-patterns
