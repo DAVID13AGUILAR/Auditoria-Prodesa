@@ -8,9 +8,17 @@ tags:
 aliases:
   - Reporte 2.4
   - Accesibilidad WCAG Output
+status: completado
+created: 2026-05-20
+fase: "2.4"
 ---
 
 # Reporte — Tarea 2.4: Revisión de Accesibilidad WCAG 2.0
+
+> [!abstract] Resumen rápido
+> **46 hallazgos** (19 críticos · 15 importantes · 5 menores) · **8 problemas sistémicos**
+> AIM Score promedio WAVE: 5.8–7.7 · ninguna página supera 8.0 de forma real
+
 **Proyecto:** Auditoría UX/UI · Prodesa.com
 **Fase:** F2 — Análisis
 **Fecha de ejecución:** Mayo–Junio 2026

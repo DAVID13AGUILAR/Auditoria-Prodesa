@@ -1,4 +1,6 @@
 ---
+status: completado
+created: 2026-05-20
 tags:
   - prodesa
   - evaluacion-heuristica
@@ -64,10 +66,10 @@ La validación confirmó que el WhatsApp funciona correctamente como opción de 
 
 **En ambas versiones**, "Agenda tu cita" introduce una fricción innecesaria: solicita correo electrónico para agendar una visita a la sala de ventas. Para ese objetivo, el teléfono debería ser suficiente — el correo es un campo extra que no corresponde a la necesidad inmediata del usuario.
 
-El resultado en desktop es una barra de tres CTAs donde uno duplica algo ya visible en pantalla y otro pide más datos de los necesarios. En mobile la arquitectura es más limpia, pero el problema de "Agenda tu cita" persiste en ambas.![[H-DETALLE-1_MIRLA-FALLO-JERARQUIA.png|495]]
+El resultado en desktop es una barra de tres CTAs donde uno duplica algo ya visible en pantalla y otro pide más datos de los necesarios. En mobile la arquitectura es más limpia, pero el problema de "Agenda tu cita" persiste en ambas.![[assets/detalle/H-DETALLE-1_MIRLA-FALLO-JERARQUIA.png|495]]
 
-![[H-DETALLE-1_AGORA-FALLO-JERARQUIA.png|495]]
-![[H-DETALLE-1_FALLO-JERARQUIA-MOBILE.png|133]]
+![[assets/detalle/H-DETALLE-1_AGORA-FALLO-JERARQUIA.png|495]]
+![[assets/detalle/H-DETALLE-1_FALLO-JERARQUIA-MOBILE.png|133]]
 
 ---
 
@@ -90,8 +92,8 @@ En las tarjetas del listado Mobile, el sistema sí diferencia correctamente: el 
 **El impacto en la lectura.**
 
 Un usuario que escanea el Hero de la página web ve dos líneas naranjas del mismo tamaño y debe decidir cuál leer primero. En un proceso de compra de alta implicación como la vivienda, esa micro-decisión es irrelevante — pero acumula fricción cognitiva innecesaria. El diseño debe resolver esa decisión por el usuario, no delegársela.
-![[H-DETALLE-2_SIN-JERARQUIA-WEB.png|205]]
-![[H-DETALLE-2_JERARQUIA-MOBILE.png|197]]
+![[assets/detalle/H-DETALLE-2_SIN-JERARQUIA-WEB.png|205]]
+![[assets/detalle/H-DETALLE-2_JERARQUIA-MOBILE.png|197]]
 
 
 
@@ -116,7 +118,7 @@ En mobile este problema no se replica de la misma forma: la barra sticky con Wha
 "Descargar brochure" recibe el tratamiento visual de CTA primario — botón naranja relleno, el más prominente de la sección. "Compartir" es secundario. El contacto directo no tiene representación.
 
 Esta jerarquía invierte la lógica del funnel: "Descargar brochure" es una acción de intención media — el usuario que descarga el brochure sigue en fase de investigación. El contacto directo con un asesor es la acción de mayor intención — el paso previo a la visita y al cierre. Dar el protagonismo visual al paso de menor intención y no representar el de mayor intención en el mismo punto es una señal de que el diseño no está optimizado para conversión.
-![[H-DETALLE-3_CTA-MOBILE.png|184]]![[H-DETALLE-3_DESCONECTADO-WEB.png|506]]
+![[assets/detalle/H-DETALLE-3_CTA-MOBILE.png|184]]![[assets/detalle/H-DETALLE-3_DESCONECTADO-WEB.png|506]]
 
 ---
 
@@ -138,11 +140,11 @@ En un proceso de decisión de compra, los datos básicos — habitaciones, m², 
 Ni en el hero, ni en la sección "Acerca del proyecto", ni en la ficha de especificaciones. La fecha de entrega es un dato crítico para la decisión de compra que no tiene equivalente en otros campos: saber cuándo se entrega el proyecto determina si el comprador puede adquirirlo según su plan de vida. Un usuario que necesita mudarse en 8 meses no puede comprar un proyecto en preventa con entrega en 2027 — pero sin la fecha visible, puede avanzar en el proceso hasta que un asesor se lo comunique, generando una frustración tardía para ambas partes.
 
 La ausencia de este dato no es menor: en el mercado colombiano de vivienda, los proyectos pueden estar en preventa, en construcción o listos para entrega. Cada estado implica condiciones de financiación, plazos y riesgos completamente diferentes. Ocultarlo por omisión no es una opción neutral — genera decisiones mal informadas.
-![[H-DETALLE-5_DATOS-SCROLL-MOBILE.png|159]]
-![[H-DETALLE-5_FALTA-DATOS-MOBILE.png|159]]
-![[H-DETALLE-5_FALTAN-DATOS-WEB.png|423]]
+![[assets/detalle/H-DETALLE-5_DATOS-SCROLL-MOBILE.png|159]]
+![[assets/detalle/H-DETALLE-5_FALTA-DATOS-MOBILE.png|159]]
+![[assets/detalle/H-DETALLE-5_FALTAN-DATOS-WEB.png|423]]
 
-![[H-DETALLE-5_SCROLL-DATOS-WEB.png]]
+![[assets/detalle/H-DETALLE-5_SCROLL-DATOS-WEB.png]]
 
 ---
 
@@ -193,11 +195,11 @@ Una interfaz inconsistente comunica desorganización. Un comprador que está tom
 **El problema sistémico**
 
 La ausencia de plantilla no es solo un problema de diseño — es un problema de gobernanza de contenidos. Si el equipo de marketing puede editar cada página de forma independiente sin campos ni secciones obligatorias, cada proyecto publicado nuevo puede reproducir la inconsistencia. La solución correcta es técnica: un CMS con secciones fijas, campos obligatorios y validación antes de publicar.
-![[H-DETALLE-6_INCONSISTENCIA-PIETRA.png|281]]![[H-DETALLE-6_INCONSISTENCIA-ORIZZO.png|282]]![[H-DETALLE-6_INCONSISTENCIA_BROCHURE.png|281]]![[H-DETALLE-6_INCONSISTENCIA-BROCHURE.png|283]]
-![[H-DETALLE-6_INCONSISTENCIA_DESCRIPCION.png|282]]![[H-DETALLE-6_INCONSISTENCIA-DESCRIPCION.png|281]]![[H-DETALLE-6_INCONSISTENCIA-UBICACION.png|281]]![[H-DETALLE-6_INCONSISTENCIA.UBICACION.png|282]]
-![[H-DETALLE-6_INCONSISTENCIA-CONTACTANOS-SIMILARES.png|281]]![[H-DETALLE-6_INCONSISTENCIA-CONTACTANOS.SIMILARES.png|283]]
+![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-PIETRA.png|281]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-ORIZZO.png|282]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA_BROCHURE.png|281]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-BROCHURE.png|283]]
+![[assets/detalle/H-DETALLE-6_INCONSISTENCIA_DESCRIPCION.png|282]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-DESCRIPCION.png|281]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-UBICACION.png|281]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA.UBICACION.png|282]]
+![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-CONTACTANOS-SIMILARES.png|281]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-CONTACTANOS.SIMILARES.png|283]]
 **Presencia en versión mobile**
-![[H-DETALLE-6_INCONSISTENCIA-GALERIA-MOBILE.png|95]]![[H-DETALLE-6_INCONSISTENCIA-MOBILE.png|96]]![[H-DETALLE-6_INCONSISTENCIA_CTA.png|96]]![[H-DETALLE-6_INCONSISTENCIA-CTA-BROCHURE.png|96]]![[H-DETALLE-6_INCONSISTENCIA_DETALLE-MOBILE.png|96]]![[H-DETALLE-6_INCONSISTENCIA-DETALLE.MOBILE.png|96]]![[H-DETALLE-6_INCONSISTENCIA-UBICACION.MOBILE.png|97]]![[H-DETALLE-6_INCONSISTENCIA-UBICACION-MOBILE.png|95]]![[H-DETALLE-6_INCONSISTENCIA_CONTACTANOS.MOBILE.png|95]]![[H-DETALLE-6_INCONSISTENCIA_CONTACTO.MOBILE.png|95]]![[H-DETALLE-6_INCONSISTENCIA-SIMILARES.MOBILE.png|95]]
+![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-GALERIA-MOBILE.png|95]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-MOBILE.png|96]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA_CTA.png|96]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-CTA-BROCHURE.png|96]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA_DETALLE-MOBILE.png|96]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-DETALLE.MOBILE.png|96]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-UBICACION.MOBILE.png|97]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-UBICACION-MOBILE.png|95]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA_CONTACTANOS.MOBILE.png|95]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA_CONTACTO.MOBILE.png|95]]![[assets/detalle/H-DETALLE-6_INCONSISTENCIA-SIMILARES.MOBILE.png|95]]
 
 Las inconsistencias no se limitan a la versión desktop — se replican y en algunos casos se agravan en mobile. La galería y sus tabs de navegación son el primer elemento de interacción visual tras el hero en mobile; que Pietra tenga solo 2 opciones frente a las 5 de Orizzo es aún más notorio en pantalla pequeña, donde el usuario escanea el contenido disponible de forma más selectiva. La ausencia de proyectos similares en Pietra mobile elimina el único punto de salida interno que retendría al usuario dentro del sitio. Los CTAs de contacto reducidos en Pietra también impactan de forma especial en mobile: el usuario en móvil tiene preferencia por canales de baja fricción como WhatsApp o llamada directa — si Pietra solo ofrece "Agendar tu cita en sala", está desaprovechando el canal más natural del dispositivo. La inconsistencia es transversal a ambas versiones.
 
@@ -217,7 +219,7 @@ El flujo natural de un usuario que busca vivienda es: aplica filtros en el lista
 **La solución técnica es estándar.** Persistir el estado de los filtros al navegar entre el listado y el detalle es un comportamiento esperado en cualquier e-commerce moderno. Se implementa pasando los parámetros de filtro en la URL (ej. `/proyecto-vivienda?ciudad=bogota&precio-max=300M`) o almacenándolos en el estado de sesión del navegador. Es una práctica tan común que su ausencia es notada inmediatamente por usuarios habituados a portales como Mercado Libre o Airbnb.
 
 **Conexión con [[H-FILTROS-03]].** H-FILTROS-03 documenta que el botón "Limpiar filtros" ya falla por sí solo — reinicia a valores default en lugar de vaciar los campos, de forma silenciosa y sin aviso. H-DETALLE-07 es una segunda capa del mismo problema de gestión de estado: el sistema tampoco preserva los filtros al navegar entre páginas. Son dos fallas distintas del mismo componente — una se activa al limpiar manualmente, la otra al navegar al detalle y volver. Juntas, configuran un sistema de filtros que ni limpia correctamente ni recuerda lo que el usuario configuró.
-![[H-DETALLE-7_FILTRO..png|334]]![[H-DETALLE-7_FILTRO.DEFAULT.png|334]]
+![[assets/detalle/H-DETALLE-7_FILTRO..png|334]]![[assets/detalle/H-DETALLE-7_FILTRO.DEFAULT.png|334]]
 
 ---
 
@@ -232,7 +234,7 @@ Este es el segundo hallazgo más crítico de la sección. El estado del proyecto
 **El benchmark del sector.** Todas las constructoras con presencia digital madura muestran el estado del proyecto de forma prominente: un chip de color en el hero de la página y en la tarjeta del listado. El código de color es intuitivo: verde para disponible, amarillo para últimas unidades, rojo para agotado, azul o gris para preventa. Este patrón es tan estándar que su ausencia genera confusión — el usuario asume que si no dice nada, el proyecto está disponible, lo cual puede ser una información incorrecta.
 
 **El impacto en la confianza y en la gestión comercial.** Un proyecto agotado que no dice que está agotado genera leads de usuarios que no van a poder comprar. Eso cuesta tiempo al equipo comercial de Prodesa y genera frustración en los usuarios que descubren la realidad después de hacer contacto. Un proyecto en preventa sin fecha de entrega visible genera expectativas incorrectas. La ausencia de estado no es neutral — es una fuente activa de malentendidos.
-![[H-DETALLE-8_FALTA-INFORMACION-ESTADO.png|373]]
+![[assets/detalle/H-DETALLE-8_FALTA-INFORMACION-ESTADO.png|373]]
 
 ---
 
@@ -275,7 +277,7 @@ En mobile no existe el hover, por lo que un tooltip no funciona. El patrón corr
 ```
 
 El acordeón además captura un CTA de conversión en el momento de mayor intención — cuando el usuario ya entendió el beneficio y quiere saber si aplica para él.
-![[H-DETALLE-9_SIN-TOOLTIP-WEB.png|520]]![[Pasted image 20260519020946.png|135]]
+![[assets/detalle/H-DETALLE-9_SIN-TOOLTIP-WEB.png|520]]![[Pasted image 20260519020946.png|135]]
 
 
 ---

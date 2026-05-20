@@ -8,9 +8,17 @@ tags:
 aliases:
   - Reporte Ejecutivo
   - Síntesis Ejecutiva
+status: completado
+created: 2026-05-20
+fase: "2.1"
 ---
 
 # Reporte Ejecutivo — Evaluación Heurística Prodesa.com
+
+> [!abstract] Resumen rápido
+> **34 hallazgos activos** · **8 críticos** · **3 hipótesis confirmadas** ([[H3A]] · [[H3B]] · [[H3C]])
+> Flujos evaluados: Homepage · Búsqueda/Filtros · Detalle de proyecto · Formulario de contacto
+
 **Tarea:** 2.1 — Evaluación heurística (10 principios de Nielsen)
 **Fase:** Fase 2 — Análisis
 **Evaluador:** David Marín

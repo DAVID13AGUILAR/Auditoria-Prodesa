@@ -1,4 +1,6 @@
 ---
+status: completado
+created: 2026-05-20
 tags:
   - prodesa
   - evaluacion-heuristica
@@ -100,7 +102,7 @@ En la versión mobile, los mismos 6 campos obligatorios deben completarse con te
 **El estándar para lead generation en real estate.**
 
 Los formularios de alta conversión en portales inmobiliarios piden únicamente nombre y teléfono en el primer paso. Ciudad o proyecto de interés pueden añadirse como tercer campo. Todo lo demás — apellido, documento, correo — se recopila en pasos posteriores, cuando el usuario ya tiene más intención y más confianza en la empresa.
-![[H-FORMULARIO-2_MOBILE.png|121]]![[H-FORMULARIO-2_WEB.png|530]]
+![[assets/formulario/H-FORMULARIO-2_MOBILE.png|121]]![[assets/formulario/H-FORMULARIO-2_WEB.png|530]]
 
 ---
 
@@ -133,7 +135,7 @@ Los mensajes que aparecen son "RELLENA ESTE CAMPO OBLIGATORIO." — todo en may�
 **Conexión con [[H3C]].**
 
 Aunque mobile muestra mejor el estado de errores que web en este caso específico, el problema de fondo — ninguna señal durante el llenado — afecta igual a ambas versiones y penaliza al usuario que invierte esfuerzo en teclado táctil antes de descubrir que algo está mal.
-![[H-FORMULARIO-3_ERROR-MOBILE.png|133]]![[H-FORMULARIO-3_ERROR-WEB.png|550]]
+![[assets/formulario/H-FORMULARIO-3_ERROR-MOBILE.png|133]]![[assets/formulario/H-FORMULARIO-3_ERROR-WEB.png|550]]
 
 ---
 
@@ -173,7 +175,7 @@ Como se documentó en H-FORM-03, el campo de teléfono con "+57 5464326" no gene
 El footer del sitio muestra cuatro líneas de contacto: Bogotá, Caribe, Servicio al cliente y Línea comercial. Tres de los cuatro tienen el mismo número (+573241000060). Para el usuario que decide llamar en lugar de usar el formulario o WhatsApp, esa presentación genera una pregunta inmediata: ¿estoy viendo el número correcto o hay un error en la página?
 
 **El patrón de gobernanza de contenidos.** Este es el cuarto ejemplo del mismo problema sistémico de mantenimiento de contenidos: el copyright desactualizado ([[01_homepage#H-HOME-05]]), el proyecto Jilguero duplicado en el footer ([[01_homepage#H-HOME-10]]) y las inconsistencias de footer ya registradas en [[02_busqueda-filtros#H-FILTROS-08]]. Todos apuntan a la misma raíz: el contenido del sitio no tiene un proceso de revisión periódica. Para un comprador evaluando si Prodesa es confiable, encontrar tres números idénticos con etiquetas distintas refuerza una señal negativa de desorganización.
-![[H-FORMULARIO-5_MISMO-NUMERO-WEB.png|565]]![[H-FORMULARIO-5_MISMO-NUMERO-MOBILE.png|123]]
+![[assets/formulario/H-FORMULARIO-5_MISMO-NUMERO-WEB.png|565]]![[assets/formulario/H-FORMULARIO-5_MISMO-NUMERO-MOBILE.png|123]]
 
 
 ---
@@ -187,7 +189,7 @@ La validación de `/contactanos` confirmó que la página SÍ ofrece tres canale
 **Falla 1 — "Agenda tu cita en sala" promete una visita física y entrega una videollamada.**
 
 El botón dice *"Agenda tu cita en sala"* — el usuario entiende que agendará una visita a la sala de ventas. El destino real es un calendario de Microsoft Teams para una reunión virtual de 30 minutos. La investigación de Nielsen Norman Group es clara: *"un enlace es una promesa — si estableces la expectativa incorrecta, el usuario pierde confianza."* El usuario que quería una visita presencial llega a una interfaz de videollamada; el usuario que sí quiere una reunión virtual no sabe que esa opción existe bajo ese nombre. **La corrección es renombrar el botón:** *"Agendar videollamada con asesor"*.
-![[H-FORMULARIO-6_CTA-TEAMS.png|317]]
+![[assets/formulario/H-FORMULARIO-6_CTA-TEAMS.png|317]]
 
 **Falla 2 — reCAPTCHA visible en el formulario "Asesoría inmediata".**
 

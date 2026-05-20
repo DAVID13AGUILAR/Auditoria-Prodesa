@@ -1,4 +1,6 @@
 ---
+status: completado
+created: 2026-05-20
 tags:
   - prodesa
   - evaluacion-heuristica
@@ -46,7 +48,7 @@ Cuando el usuario aplica un filtro en `/proyecto-vivienda` — por ejemplo selec
 
 La primera es de **orientación:** el usuario no sabe si hay 2 proyectos o 20. Si hay pocos, quizás quiere ampliar la búsqueda a ciudades cercanas. Si hay muchos, quizás quiere afinar. Sin el dato, no puede tomar esa decisión de forma informada — tiene que contar las tarjetas manualmente o asumir que lo que ve es todo lo que hay.
 
-La segunda es de **confirmación de acción:** en una SPA como la de Prodesa, el filtro es un componente React que actualiza los resultados sin recargar la página. Si no hay ninguna señal visible de que el sistema procesó la acción (ni contador, ni spinner, ni mensaje), el usuario puede interpretar la ausencia de feedback como un error. Esta confusión es especialmente frecuente en conexiones lentas donde hay un retardo entre el clic y la actualización de la lista.![[H-FILTROS-1_SIN-CONTADOR-DE-RESULTADOS-WEB.png|237]]![[H-FILTROS-1-SIN-CONTADOR-DE-RESULTADOS-MOBILE.png|155]]
+La segunda es de **confirmación de acción:** en una SPA como la de Prodesa, el filtro es un componente React que actualiza los resultados sin recargar la página. Si no hay ninguna señal visible de que el sistema procesó la acción (ni contador, ni spinner, ni mensaje), el usuario puede interpretar la ausencia de feedback como un error. Esta confusión es especialmente frecuente en conexiones lentas donde hay un retardo entre el clic y la actualización de la lista.![[assets/filtros/H-FILTROS-1_SIN-CONTADOR-DE-RESULTADOS-WEB.png|237]]![[assets/filtros/H-FILTROS-1-SIN-CONTADOR-DE-RESULTADOS-MOBILE.png|155]]
 
 
 ### H-FILTROS-02 — Filtros "VIS / NO VIS" sin definición ni tooltip
@@ -69,8 +71,8 @@ Cuando el usuario enfrenta "VIS / NO VIS" sin entender los términos, hay tres r
 **El error conceptual adicional: definir por negación.**
 
 "NO VIS" define algo por lo que *no es*, no por lo que *es*. Para el usuario esto no comunica ningún beneficio concreto. Sería equivalente a que un menú de restaurante tuviera "No vegetariano" como categoría en lugar de "Carnes". El lenguaje orientado al usuario debería ser: *"Con subsidio del gobierno"* (VIS) vs. *"Sin tope de precio"* (NO VIS).
-![[H-FILTROS-2_SIN-TOOLTIP-MOBILE-VIP.png|179]]
-![[H-FILTROS-2_SIN-TOOLTIP-VIS-VIP.png|179]]
+![[assets/filtros/H-FILTROS-2_SIN-TOOLTIP-MOBILE-VIP.png|179]]
+![[assets/filtros/H-FILTROS-2_SIN-TOOLTIP-VIS-VIP.png|179]]
 ---
 
 ### H-FILTROS-03 — "Limpiar filtros": mala implementación y comportamiento engañoso
@@ -101,9 +103,9 @@ El tercer problema que agrava esto: los valores default no tienen ninguna señal
 
 Los dos principios violados trabajan juntos: P3 — Control del usuario exige que el usuario pueda revertir acciones con claridad; P2 — Mundo real exige que las etiquetas de la interfaz correspondan al comportamiento real del sistema. "Limpiar" no corresponde a "reiniciar a defaults".
 
-![[H-FILTROS-3_LIMPIAR-FILTROS-CODIGO.png]]
-![[H-FILTROS-3_LIMPIAR-FILTROS-MOBILE.png|236]]
-![[H-FILTROS-3_LIMPIAR-FILTROS-WEB.png]]
+![[assets/filtros/H-FILTROS-3_LIMPIAR-FILTROS-CODIGO.png]]
+![[assets/filtros/H-FILTROS-3_LIMPIAR-FILTROS-MOBILE.png|236]]
+![[assets/filtros/H-FILTROS-3_LIMPIAR-FILTROS-WEB.png]]
 
 
 ---
@@ -141,8 +143,8 @@ Un empty state es la pantalla que aparece cuando una búsqueda no tiene resultad
 En el caso de Prodesa, el empty state debe ocupar el mismo espacio visual donde normalmente aparecen las tarjetas de proyectos. No puede ser un texto pequeño en un rincón — tiene que ser el elemento principal de la pantalla en ese momento, con jerarquía visual suficiente para que el usuario lo lea y entienda qué hacer a continuación.
 
 El problema se amplifica por [[H-FILTROS-02]]: si el usuario ya no entiende la diferencia entre VIS y NO VIS, aplica una combinación que no da resultados, y el sistema no le explica qué pasó — ese usuario no tiene ninguna herramienta para diagnosticar qué salió mal ni cómo corregirlo.
-![[H-FILTROS-5_EMPTY-STATE-INVISIBLE-WEB.png]]
-![[H-FILTROS-05_ EMPTY-STATE-INVISIBLE-MOBILE.png|129]]
+![[assets/filtros/H-FILTROS-5_EMPTY-STATE-INVISIBLE-WEB.png]]
+![[assets/filtros/H-FILTROS-05_ EMPTY-STATE-INVISIBLE-MOBILE.png|129]]
 
 ---
 
@@ -169,8 +171,8 @@ La captura confirma que ninguna tarjeta incluye una etiqueta de estado del proye
 
 P6 — Reconocimiento: la tarjeta debe mostrar toda la información que el usuario necesita para decidir si vale la pena hacer clic. Un precio con asterisco no explicado en el momento justo no cumple esa función — el usuario reconoce el número pero no entiende su significado real. P4 — Consistencia: el tratamiento del asterisco es diferente entre tarjetas (algunas dicen "precio fijo", otras tienen un aviso legal de cinco líneas). El usuario que ya revisó una tarjeta no sabe qué esperar de la siguiente.  
 
-![[H-FILTROS-6_INCONSISTENCIA-1.png|204]]
-![[H-FILTROS-6_INCONSISTENCIA-2.png|204]]
+![[assets/filtros/H-FILTROS-6_INCONSISTENCIA-1.png|204]]
+![[assets/filtros/H-FILTROS-6_INCONSISTENCIA-2.png|204]]
 
 ---
 
@@ -195,8 +197,8 @@ El efecto concreto: el usuario que entra al panel de filtros no sabe si ya hay c
 **Problema 3 — Conexión con H-FILTROS-03.**
 
 El comportamiento de "Limpiar filtros" (reset a defaults, no clear) agrava estos dos problemas: si los defaults ya son invisibles como tales, y "Limpiar" vuelve a esos defaults sin señalarlo, el usuario que activa "Limpiar" no sabe en qué estado quedó el sistema. Ver análisis completo en [[H-FILTROS-03]].
-![[H-FILTROS-7_INCONSISTENCIA-MOBILE.png|164]]
-![[H-FILTROS-7_INCONSISTENCIA-FILTRO-WEB.png]]
+![[assets/filtros/H-FILTROS-7_INCONSISTENCIA-MOBILE.png|164]]
+![[assets/filtros/H-FILTROS-7_INCONSISTENCIA-FILTRO-WEB.png]]
 
 ---
 
@@ -211,7 +213,7 @@ Para el usuario que navega visualmente el impacto es bajo — el footer es una l
 
 El problema de fondo no es solo Jilguero — es que el footer no tiene un mecanismo de sincronización con la base de datos de proyectos. Cada vez que Prodesa publica, pausa o retira un proyecto, alguien tiene que actualizar el footer manualmente. Con 29 proyectos activos en 16 ciudades, esa operación manual es propensa a errores: entradas duplicadas, proyectos ya entregados que siguen apareciendo, o proyectos nuevos que tardan en sumarse.
 
-![[H-FILTROS-8_DUPLICADO JILGUERO.png]]
+![[assets/filtros/H-FILTROS-8_DUPLICADO JILGUERO.png]]
 
 ---
 
@@ -234,9 +236,9 @@ En conexiones lentas — el escenario más común en el mercado colombiano de mo
 Cuando el spinner desaparece y los resultados cargan, el viewport permanece en la posición del panel de filtros. El usuario tiene que hacer scroll manualmente hacia abajo para ver las tarjetas de proyectos. Esto ocurre tanto en web como en mobile.
 
 En mobile el impacto es mayor: el panel de filtros ocupa una porción significativa de la pantalla, y al no haber un desplazamiento automático al área de resultados, el usuario puede no saber inmediatamente que los resultados ya cargaron — especialmente si el spinner desapareció fuera de su campo visual. La secuencia correcta sería: clic → spinner inmediato → resultados → scroll automático al primer resultado. Lo que ocurre hoy es: clic → gap → spinner tardío → resultados → scroll manual del usuario.
-![[H-FILTRO-9-SIN-SCROLL-AUTOMATICO-WEB.png|344]]
-![[H-FILTROS-9-SPINNER-WEB.png|340]]
-![[H-FILTROS-9_SPINNER-MOBILE.png|136]]![[H-FILTRO-9_SIN-ESCROLL-AUTOMATICO-MOBILE.png|136]]
+![[assets/filtros/H-FILTRO-9-SIN-SCROLL-AUTOMATICO-WEB.png|344]]
+![[assets/filtros/H-FILTROS-9-SPINNER-WEB.png|340]]
+![[assets/filtros/H-FILTROS-9_SPINNER-MOBILE.png|136]]![[assets/filtros/H-FILTRO-9_SIN-ESCROLL-AUTOMATICO-MOBILE.png|136]]
 
 ---
 

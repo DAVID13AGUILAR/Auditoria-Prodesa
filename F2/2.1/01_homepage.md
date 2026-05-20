@@ -7,9 +7,19 @@ tags:
   - critico
 aliases:
   - Hallazgos Homepage
+status: completado
+created: 2026-05-20
+fase: "2.1"
+pantalla: homepage
+hallazgos_total: 10
+hallazgos_criticos: 3
 ---
 
 # 01 — Hallazgos Homepage
+
+> [!warning] 3 hallazgos críticos
+> **H-HOME-01** SPA sin feedback · **H-HOME-04** Badges VIS/VIP sin contexto · **H-HOME-06** Link Google Play roto
+> → Ver inventario completo en [[05_inventario-final]]
 **URL evaluada:** https://prodesa.com/
 **Fecha:** Mayo 2026
 
@@ -54,7 +64,7 @@ P1 es el primer principio de Nielsen porque es el más fundamental: si el usuari
 
 ### H-HOME-01 — SPA sin feedback de carga
 **¿Por qué es importante solucionarlo?**
-Este es el hallazgo de mayor impacto técnico de toda la homepage. El sitio depende al 100% de JavaScript para mostrar cualquier contenido. Esto crea una ventana de tiempo entre el click del usuario y el primer render visual — una pantalla completamente en blanco o el mensaje *"You need to enable JavaScript"*. En términos de comportamiento de usuario, los estudios de Google y Nielsen Norman Group indican que el 53% de las visitas móviles se abandonan si la página tarda más de 3 segundos en cargar algo visible. Sin un skeleton de carga o un mensaje de estado, el usuario interpreta el vacío como un error del sitio y cierra la pestaña. En el mercado colombiano, donde muchos usuarios acceden desde conexiones móviles de velocidad variable (3G/4G en municipios pequeños), este problema se amplifica. No ver nada en pantalla no es una molestia — es una razón de abandono inmediato. Resolver esto significa retener usuarios que hoy se pierden antes de ver una sola imagen de los proyectos.![[H-HOME-1-JAVA.png]]
+Este es el hallazgo de mayor impacto técnico de toda la homepage. El sitio depende al 100% de JavaScript para mostrar cualquier contenido. Esto crea una ventana de tiempo entre el click del usuario y el primer render visual — una pantalla completamente en blanco o el mensaje *"You need to enable JavaScript"*. En términos de comportamiento de usuario, los estudios de Google y Nielsen Norman Group indican que el 53% de las visitas móviles se abandonan si la página tarda más de 3 segundos en cargar algo visible. Sin un skeleton de carga o un mensaje de estado, el usuario interpreta el vacío como un error del sitio y cierra la pestaña. En el mercado colombiano, donde muchos usuarios acceden desde conexiones móviles de velocidad variable (3G/4G en municipios pequeños), este problema se amplifica. No ver nada en pantalla no es una molestia — es una razón de abandono inmediato. Resolver esto significa retener usuarios que hoy se pierden antes de ver una sola imagen de los proyectos.![[assets/home/H-HOME-1-JAVA.png]]
 Conexión inestable: Aunque el 4G tiene buena cobertura, tecnologías más lentas como 3G aún están presentes en más del 75% de los sitios móviles del país, y hay municipios donde la conexión no es óptima.
 · Acceso mayoritario vía móvil: Más del 81% del tráfico web en Colombia proviene de dispositivos móviles. Este tipo de conexión es, por naturaleza, más propensa a sufrir variaciones de velocidad que una de fibra óptica en un ordenador de escritorio.
 · Bajo porcentaje de JS desactivado: Es un mito que mucha gente navegue con JavaScript desactivado. Estudios actuales indican que solo entre el 1% y 2% de los usuarios lo hace conscientemente. Por lo tanto, el problema real no es que el usuario lo bloquee, sino que el código JS de la web sea tan pesado que el navegador se demore en procesarlo y mostrar algo en pantalla.
@@ -73,32 +83,32 @@ Al combinar ambos datos, podemos concluir que, para una web en Colombia que no s
 ### H-HOME-02 — Doble barra de navegación
 **¿Por qué es importante solucionarlo?**
 La atención visual es un recurso limitado. Cada elemento en la pantalla compite por ese recurso. Tener dos barras de navegación activas simultáneamente duplica la carga cognitiva de orientarse en el sitio: el usuario debe procesar dos niveles de opciones antes de entender cuál es el camino correcto. Para el comprador de vivienda — que probablemente está llegando al sitio por primera vez, desde un anuncio de pauta, con un objetivo muy concreto (ver proyectos) — esta ambigüedad en el punto de entrada puede hacer que abandone antes de encontrar el listado de proyectos. La resolución no es eliminar opciones, sino jerarquizarlas correctamente: mostrar al comprador lo que necesita ver y esconder lo que es para audiencias internas.
-![[H-HOME-2 NAV BAR MOBILE.png]]
+![[assets/home/H-HOME-2 NAV BAR MOBILE.png]]
 -Versión Móvil.
-![[H-HOME-2 NAV BAR WEB.png]]
+![[assets/home/H-HOME-2 NAV BAR WEB.png]]
 -Versión Web.
 ### H-HOME-03 — "Invertir desde el exterior" en nav principal
 **¿Por qué es importante solucionarlo?**
 El espacio del menú de navegación es premium — es lo primero que el usuario escanea para orientarse. Incluir un enlace orientado a un segmento minoritario (inversionistas en el exterior) en el mismo nivel visual que el CTA principal del sitio ("Ofertas de vivienda") genera una decisión innecesaria: ¿esto es para mí? Esta pregunta, aunque breve, interrumpe el flujo mental del comprador local. En diseño de interfaces, cada decisión extra que se le impone al usuario tiene un costo en tasa de conversión. Mover este enlace a una ubicación secundaria no elimina la audiencia de inversionistas — les da su propio espacio más apropiado — y libera el nav principal para que el comprador local llegue más rápido a lo que busca.
-![[H-HOME-3 MOBILE.png]]
+![[assets/home/H-HOME-3 MOBILE.png]]
 -Versión Móvil.
-![[H-HOME-3 WEB.png]]
+![[assets/home/H-HOME-3 WEB.png]]
 
 -Versión Web.
 
 ### H-HOME-04 — Badges "VIS / VIP" sin explicación en tarjetas de proyecto
 **¿Por qué es importante solucionarlo?**
 La captura visual del sitio confirma que "VIS" y "VIP" aparecen como badges encima de las imágenes de cada tarjeta de proyecto en el carousel de la homepage — es decir, son lo primero que el usuario lee sobre cada proyecto antes de ver el nombre, la ciudad o el precio. "VIS" (Vivienda de Interés Social) y "VIP" (Vivienda de Interés Prioritario) son clasificaciones del sistema de subsidios del gobierno colombiano. Son completamente transparentes para un asesor inmobiliario o un empleado de Prodesa, pero completamente opacos para una persona buscando su primer apartamento. El problema es que estas etiquetas actúan como un filtro invisible: el comprador no sabe si "VIS" o "VIP" es para él, ni si es mejor o peor que el otro. Sin entenderlo, no puede self-qualificarse — no puede decirse a sí mismo "ese es mi tipo de proyecto" — y por lo tanto no hace clic. Adicionalmente, el título de la pestaña del navegador ("Proyectos de Vivienda VIS y NO VIS") repite la jerga antes incluso de que el usuario cargue el contenido de la página. Nota corregida respecto a la versión anterior: esta terminología no se confirmó en el menú de navegación ni en los filtros visibles del sitio.
-![[H-HOME-4 VIS - VIP.png]]
-![[H-HOME-4 VIS-VIP DESCRIPTION.png]]
+![[assets/home/H-HOME-4 VIS - VIP.png]]
+![[assets/home/H-HOME-4 VIS-VIP DESCRIPTION.png]]
 ---
 
 ### H-HOME-05 — Copyright desactualizado (2025 vs. 2026)
 **¿Por qué es importante solucionarlo?**
-Aunque este es un hallazgo de severidad menor, el copyright desactualizado actúa como una señal sutil de descuido. En decisiones de compra de alto valor como la vivienda, el comprador está en un estado de hipervigilancia buscando señales de confianza o desconfianza. Un copyright del año pasado puede hacer que se pregunte: ¿este sitio está activo? ¿Están actualizando los proyectos? ¿Los precios son vigentes? No es un problema que bloquee la conversión por sí solo, pero contribuye a un patrón de descuido editorial que, acumulado con otros pequeños errores, puede erosionar la confianza del usuario. Es además el arreglo más rápido y barato del inventario completo.![[H-HOME-5 Copyright WEB.png]]
+Aunque este es un hallazgo de severidad menor, el copyright desactualizado actúa como una señal sutil de descuido. En decisiones de compra de alto valor como la vivienda, el comprador está en un estado de hipervigilancia buscando señales de confianza o desconfianza. Un copyright del año pasado puede hacer que se pregunte: ¿este sitio está activo? ¿Están actualizando los proyectos? ¿Los precios son vigentes? No es un problema que bloquee la conversión por sí solo, pero contribuye a un patrón de descuido editorial que, acumulado con otros pequeños errores, puede erosionar la confianza del usuario. Es además el arreglo más rápido y barato del inventario completo.![[assets/home/H-HOME-5 Copyright WEB.png]]
 
 -Versión Web.
-![[H-HOME-5 Copyright MOBILE.png]]
+![[assets/home/H-HOME-5 Copyright MOBILE.png]]
 -Versión Mobil.
 
 ---
@@ -106,16 +116,16 @@ Aunque este es un hallazgo de severidad menor, el copyright desactualizado actú
 ### H-HOME-06 — Link de Google Play roto
 **¿Por qué es importante solucionarlo?**
 En Colombia, la penetración de Android supera el 70% del mercado de smartphones. Un botón de "Descarga en Google Play" que lleva a la tienda de Apple es un error funcional que afecta directamente a 7 de cada 10 usuarios que intenten descargar la app. Más allá del impacto cuantitativo, el efecto psicológico es relevante: un usuario que hace clic para descargar la app y termina en una página que no corresponde no solo no descargará la app — cuestionará la seriedad general del sitio. Este tipo de error técnico visible comunica que el sitio no tiene controles de calidad, lo que genera desconfianza en el proceso de compra que el usuario está considerando. Es el error más fácil de corregir del inventario y tiene uno de los impactos más concretos.
--Versión Web.![[H-HOME-6 H-HOME-06_google-play-link-incorrecto..png]]
+-Versión Web.![[assets/home/H-HOME-6 H-HOME-06_google-play-link-incorrecto..png]]
 
 
 ---
 
 ### H-HOME-07 — Ausencia de breadcrumbs
 **¿Por qué es importante solucionarlo?**
-Prodesa maneja más de 15 proyectos activos distribuidos en más de 10 ciudades colombianas, organizados además en categorías de macroproyectos y proyectos individuales. Sin breadcrumbs, el usuario que llega directamente a la página de un proyecto (por un link compartido, por un resultado de Google, por un anuncio de pauta) no tiene forma rápida de entender la jerarquía: ¿en qué ciudad está este proyecto? ¿Cómo veo otros proyectos en la misma ciudad? ¿Cómo llego al listado general? Resolver esto reduce la sensación de "estar perdido" y facilita la exploración de otros proyectos, lo que directamente aumenta el tiempo en el sitio y la probabilidad de conversión.![[H-HOME-7_SIN BREADCRUMB-DETALLE-PROYECTO.png]]
-![[H-HOME-7_SIN-BREADCRUMBS- INVERTIR DESDE EL EXTERIOR.png]]
-![[H-HOME-7_SIN-BREADCRUMBS-CONTACTANOS.png]]
+Prodesa maneja más de 15 proyectos activos distribuidos en más de 10 ciudades colombianas, organizados además en categorías de macroproyectos y proyectos individuales. Sin breadcrumbs, el usuario que llega directamente a la página de un proyecto (por un link compartido, por un resultado de Google, por un anuncio de pauta) no tiene forma rápida de entender la jerarquía: ¿en qué ciudad está este proyecto? ¿Cómo veo otros proyectos en la misma ciudad? ¿Cómo llego al listado general? Resolver esto reduce la sensación de "estar perdido" y facilita la exploración de otros proyectos, lo que directamente aumenta el tiempo en el sitio y la probabilidad de conversión.![[assets/home/H-HOME-7_SIN BREADCRUMB-DETALLE-PROYECTO.png]]
+![[assets/home/H-HOME-7_SIN-BREADCRUMBS- INVERTIR DESDE EL EXTERIOR.png]]
+![[assets/home/H-HOME-7_SIN-BREADCRUMBS-CONTACTANOS.png]]
 ---
 
 ### H-HOME-08 — "SAGRILAFT" sin link y sin explicación
@@ -129,18 +139,18 @@ El segundo es de **frustración:** si el usuario tiene la curiosidad de hacer cl
 El tercero es de **oportunidad perdida:** SAGRILAFT es en realidad una señal de confianza. Prodesa lo tiene porque cumple con las normas antilavado que el gobierno colombiano exige. Bien comunicado, podría reforzar la credibilidad de la empresa ante el comprador. Mal comunicado — como está ahora — hace exactamente lo contrario.
 
 La solución no requiere eliminar el sello. Requiere darle contexto: convertirlo en un enlace que lleve a una página o documento que explique en lenguaje sencillo qué es y por qué Prodesa lo tiene.
-![[H-HOME-8_SAGRILAF-SIN CONTEXTO- SIN LINK.png]]
+![[assets/home/H-HOME-8_SAGRILAF-SIN CONTEXTO- SIN LINK.png]]
 ---
 
 ### H-HOME-09 — Ausencia de propuesta de valor en el hero
 **¿Por qué es importante solucionarlo?**
 El hero de la homepage es el momento de mayor intención de todo el sitio: el usuario acaba de llegar, su atención está en el nivel más alto, y tiene una fracción de segundos para decidir si esto es lo que buscaba. Si en ese momento no hay un mensaje claro — *¿qué vende Prodesa, dónde, para quién y a cuánto?* — el usuario activa el "escaneo rápido" y si no encuentra respuesta, abandona. Un H1 con propuesta de valor no es solo un principio de Nielsen sino el fundamento del marketing de respuesta directa: claridad antes que creatividad. Resolverlo puede impactar directamente la tasa de rebote de la homepage, que en sitios de vivienda suele ser de los KPIs más sensibles a la claridad del mensaje inicial.
-![[H-HOME-9_ HERO-SIN-CONTEXTO WEB.png]]
-![[H-HOME-9_HERO-SIN-CONTEXTO-MOBILE.png]]
+![[assets/home/H-HOME-9_ HERO-SIN-CONTEXTO WEB.png]]
+![[assets/home/H-HOME-9_HERO-SIN-CONTEXTO-MOBILE.png]]
 
 ### H-HOME-10 — Proyecto "Jilguero" duplicado en el footer
 **¿Por qué es importante solucionarlo?**
-El footer actúa como un sitemap visible para el usuario y como señal de estructuración de contenido para los motores de búsqueda. Tener el mismo proyecto listado dos veces con la misma URL genera dos problemas: para el usuario, confusión sobre si existen dos proyectos o si hay un error de datos; para SEO, un link duplicado que no aporta valor de rastreo. En el contexto de la evaluación heurística, este hallazgo refuerza un patrón de falta de mantenimiento del contenido que, aunque no bloquea la conversión por sí solo, acumula señales de descuido que minan la confianza del comprador a lo largo de toda la sesión.![[H-HOME-10_JILGUERO-DUPLICADO-LINK-CODIGO.png]]
+El footer actúa como un sitemap visible para el usuario y como señal de estructuración de contenido para los motores de búsqueda. Tener el mismo proyecto listado dos veces con la misma URL genera dos problemas: para el usuario, confusión sobre si existen dos proyectos o si hay un error de datos; para SEO, un link duplicado que no aporta valor de rastreo. En el contexto de la evaluación heurística, este hallazgo refuerza un patrón de falta de mantenimiento del contenido que, aunque no bloquea la conversión por sí solo, acumula señales de descuido que minan la confianza del comprador a lo largo de toda la sesión.![[assets/home/H-HOME-10_JILGUERO-DUPLICADO-LINK-CODIGO.png]]
 
 ---
 
