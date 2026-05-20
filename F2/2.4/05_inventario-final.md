@@ -77,6 +77,7 @@ aliases:
 | A-CONTACT-03 | /contactanos | 9 Fieldsets sin legend | 1.3.1 | A | 9 `<fieldset>` sin `<legend>` en toda la página — el usuario de screen reader navega grupos de campos sin saber a qué sección pertenecen | 🟠 |
 | A-FORM-01 | /contactanos | Labels del formulario | 3.3.2 | A | WAVE detectó 8 form labels positivos pero con label chaos: 1 missing + 3 huérfanos + 1 select sin label. Pendiente validar en DevTools campo por campo | 🟠 |
 | A-FORM-03 | /contactanos | Mensajes de error insuficientes y poco visibles | 3.3.1 / 3.3.3 | A/AA | Solo dicen "campo obligatorio" sin describir el error ni cómo corregirlo. Texto muy pequeño. No indican formato esperado. Falla 3.3.1 (identificación) y 3.3.3 (sugerencia de corrección) | 🔴 |
+| A-FORM-06 | /contactanos | Navegación por teclado — foco en texto no en input | 2.4.7 / 2.1.1 | AA/A | Foco recae sobre la etiqueta flotante en lugar del `<input>`. Campo de teléfono y tipo de documento no muestran indicador de foco — inoperables por teclado. Falla 2.4.7 (Focus Visible) y 2.1.1 (Teclado) | 🔴 |
 | A-FORM-05 | /contactanos | Confirmación sin seguimiento ni transparencia de datos | 4.1.3 / 3.3.4 | AA | Redirige a `/Thankyou` — técnicamente accesible. Sin pasos siguientes, sin email/SMS de confirmación, sin indicar quién maneja los datos ni cómo. El usuario no sabe si su solicitud llegó. Genera incertidumbre sobre el destino de datos personales entregados | 🔴 |
 
 ### 🟡 Menores — corregir si hay tiempo
@@ -143,6 +144,7 @@ Los hallazgos de accesibilidad **refuerzan H3B desde una dimensión diferente**:
 - [x] Detalle de proyecto (Siena) validado con WAVE ✅ — 14 hallazgos documentados
 - [x] Búsqueda/filtros validada con WAVE ✅ — 10 hallazgos documentados
 - [x] `/contactanos` validada con WAVE ✅ — 7 hallazgos documentados (incluyendo Broken ARIA nuevo)
+- [x] Validación por teclado del formulario ✅ — foco en etiqueta no en input, teléfono y tipo documento sin foco visible
 - [ ] Medir contraste de "Buscar vivienda", "Limpiar Filtros", "Realizar Pago" con Colour Contrast Analyser
 - [x] Probar formulario vacío → errores validados ✅ — "campo obligatorio" sin descripción ni formato, texto muy pequeño
 - [x] Probar formulario completo → confirmación validada ✅ — redirige a `/Thankyou` en español, sin pasos siguientes
