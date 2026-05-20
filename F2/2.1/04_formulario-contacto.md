@@ -29,7 +29,6 @@ aliases:
 | H-FORM-05 | P2 - Mundo real + P4 - Consistencia | /contactanos / Información de contacto en footer | El footer del sitio muestra **cuatro números de teléfono distintos**: Bogotá (+573241000060), Caribe (+573241000060), Servicio al cliente (+573241000060) y Línea comercial (+573241000055). Tres de los cuatro tienen el mismo número, pero el usuario no puede distinguir a cuál llamar según su necesidad. La diferenciación entre "Servicio al cliente" y "Línea comercial" no es intuitiva para alguien que quiere comprar. Es el cuarto ejemplo del mismo patrón de gobernanza de contenidos junto a H-HOME-05, H-HOME-10 y H-FILTROS-08. | ✅ validado — capturas web y mobile del footer | 2 🟡 | Simplificar a dos números claramente etiquetados: *"Quiero conocer un proyecto: [número]"* y *"Ya soy cliente: [número]"*. Añadir horario de atención visible. Añadir enlace directo a WhatsApp Business. |
 | H-FORM-06 | P3 - Control del usuario + P4 - Consistencia | /contactanos / Canales de contacto | **Corregido y ampliado tras validación.** La página `/contactanos` SÍ ofrece tres canales: WhatsApp directo, "Agenda tu cita en sala" (Teams) y "Asesoría inmediata" (callback). Sin embargo, la implementación tiene tres problemas: (1) **CTA engañoso**: "Agenda tu cita en sala" lleva a una reunión virtual por Microsoft Teams — el nombre promete visita física, el destino es una videollamada. (2) **reCAPTCHA en "Asesoría inmediata"**: el formulario de callback tiene reCAPTCHA visible, que puede reducir conversiones hasta un 40% (Stanford) — contradice directamente la promesa de "inmediata". (3) **Formularios inconsistentes**: el formulario del proyecto pide 6 campos incluyendo cédula; el formulario de callback pide 4 sin cédula — sin razón aparente. **El formulario embebido en el proyecto** sigue sin ofrecer opción de canal. | ✅ validado — capturas de /contactanos (desktop) | 2 🟡 | (1) Renombrar "Agenda tu cita en sala" a *"Agendar videollamada con asesor"*. (2) Reemplazar reCAPTCHA visible por reCAPTCHA v3 invisible. (3) Unificar campos entre formularios. (4) Añadir selector de canal en el formulario embebido del proyecto. |
 | H-FORM-07 | P8 - Minimalismo | Detalle proyecto / Formulario embebido | **Corregido tras validación.** "Déjanos tus datos" no navega a `/contactanos` — hace scroll al formulario embebido en la página del proyecto. El sistema ya sabe en qué proyecto está el usuario (URL), pero no transmite ese contexto al CRM: el lead llega sin proyecto identificado. Mismo patrón de pérdida de contexto que H-DETALLE-03 y H-DETALLE-07. | ✅ validado — formulario hace scroll sin precargar proyecto | 2 🟡 | Añadir campo oculto al formulario que lea el nombre del proyecto desde la URL y lo transmita automáticamente al CRM en cada envío. |
-| H-FORM-08 | P10 - Ayuda y documentación | /contactanos / Preguntas frecuentes | **Confirmado tras validación.** La página `/contactanos` no tiene ninguna sección de FAQ ni enlace a preguntas frecuentes. Después de los canales de contacto (WhatsApp, Teams, callback), la página continúa únicamente con CTAs: "Visítanos en sala", "Llámanos" y "Te llamamos de inmediato". El usuario que llega con dudas sobre subsidios, cuota inicial o fecha de entrega no encuentra respuesta — su única opción es contactar a un asesor para hacer una pregunta que el sitio podría resolver por sí solo. | ✅ validado — /contactanos sin sección FAQ | 1 🟢 | Añadir sección de FAQ colapsable en `/contactanos` con las 5 preguntas más frecuentes: ¿Cómo aplico al subsidio? / ¿Cuánto es la cuota inicial? / ¿Cuándo se entrega el proyecto? / ¿Qué documentos necesito? / ¿Puedo comprar si tengo crédito vigente? Cada respuesta con CTA de "Consultar con asesor" al final. |
 | H-FORM-09 | P1 - Visibilidad + P4 - Consistencia | Global / WhatsApp | **Corregido tras validación.** WhatsApp SÍ existe — en la barra sticky de la página de detalle de proyecto funciona correctamente y redirige a WhatsApp. El problema real es de **cobertura parcial**: el botón de WhatsApp solo aparece dentro de cada proyecto, **no en el homepage ni en el listado** (`/proyecto-vivienda`). El CTA "Contáctanos" del homepage redirige únicamente al formulario, no a WhatsApp. Un usuario que está navegando el homepage o comparando proyectos en el listado no tiene acceso al canal de mayor conversión — solo lo encuentra si ya entró a un proyecto específico. | ✅ validado — homepage y listado sin WhatsApp, detalle con WhatsApp en sticky | 2 🟡 (revisado de 3 a 2 — WhatsApp existe en el detalle; el problema es ausencia en las etapas anteriores del funnel) | Extender el botón flotante de WhatsApp al homepage y al listado de proyectos. En el listado, el mensaje puede ser genérico: *"Hola, quiero información sobre proyectos de vivienda"*. En el homepage, igual. Solo en el detalle se contextualiza con el nombre del proyecto. |
 
 ---
@@ -44,7 +43,6 @@ Antes de analizar cada hallazgo individualmente, es importante entender cómo el
 | H-FORM-07 — No precarga proyecto | [[03_detalle-proyecto#H-DETALLE-03]], [[03_detalle-proyecto#H-DETALLE-07]] | El mismo patrón de pérdida de contexto: el usuario pierde filtros al volver al listado ([[03_detalle-proyecto#H-DETALLE-07]]), el CTA está desconectado de la descripción ([[03_detalle-proyecto#H-DETALLE-03]]), y el lead llega al CRM sin proyecto identificado. |
 | H-FORM-06 — Canales con implementación deficiente | [[03_detalle-proyecto#H-DETALLE-01]] | [[03_detalle-proyecto#H-DETALLE-01]] documentó que "Agenda tu cita" pide correo innecesariamente. H-FORM-06 es la misma fricción de imposición de canal — el sistema decide cómo contactar al usuario sin preguntarle. |
 | H-FORM-02 — Exceso de campos | [[01_homepage#H-HOME-04]], [[02_busqueda-filtros#H-FILTROS-02]], [[03_detalle-proyecto#H-DETALLE-01]] | El lenguaje técnico del sector y el exceso de datos solicitados es un patrón que recorre todo el funnel: VIS sin definición en nav ([[01_homepage#H-HOME-04]]), en filtros ([[02_busqueda-filtros#H-FILTROS-02]]) y cédula innecesaria en formulario. |
-| H-FORM-08 — FAQ desconectada | [[03_detalle-proyecto#H-DETALLE-09]] | [[03_detalle-proyecto#H-DETALLE-09]] documenta "subsidio disponible" sin contexto en el detalle. H-FORM-08 es la misma necesidad de ayuda contextual en el siguiente paso — el usuario con dudas no encuentra respuesta en ninguno de los dos puntos. |
 | H-FORM-05 — Tres números iguales | [[01_homepage#H-HOME-05]], [[01_homepage#H-HOME-10]], [[02_busqueda-filtros#H-FILTROS-08]] | Cuarto ejemplo del mismo patrón de gobernanza: copyright desactualizado ([[01_homepage#H-HOME-05]]), Jilguero duplicado ([[01_homepage#H-HOME-10]]), footer inconsistente ([[02_busqueda-filtros#H-FILTROS-08]]) y tres teléfonos idénticos. |
 | H-FORM-03 + H-FORM-04 — Validación y errores | [[H3C]] | Validación post-submit y mensajes en mayúsculas penalizan especialmente mobile — confirman [[H3C]] (experiencia mobile inferior). |
 | H-FORM-01 — Confirmación incompleta | [[03_detalle-proyecto#H-DETALLE-03]] | [[03_detalle-proyecto#H-DETALLE-03]] bloquea el inicio de la conversión; H-FORM-01 bloquea el cierre. Dos fallas consecutivas del mismo funnel de conversión. |
@@ -244,30 +242,6 @@ El asesor que recibe el lead en el CRM ve nombre, teléfono y correo — pero no
 
 ---
 
-### H-FORM-08 — Ausencia total de FAQ en el flujo de contacto
-
-**Confirmado tras validación**
-
-La validación de `/contactanos` confirmó que no existe ninguna sección de preguntas frecuentes ni enlace a ella en ningún punto del flujo. Después de los tres canales de contacto (WhatsApp, Teams, callback), la página continúa con tres CTAs adicionales: *"Visítanos en sala"*, *"Llámanos"* y *"Te llamamos de inmediato"*. No hay ningún módulo de ayuda, acordeón, ni referencia a `/preguntas`.
-
-**Lo que esto significa para el usuario.**
-
-Un comprador primerizo que llega a `/contactanos` con dudas básicas — *¿cuánto es la cuota inicial?, ¿cómo aplico al subsidio?, ¿qué documentos necesito?* — tiene una única opción: contactar a un asesor. El sitio lo obliga a usar un canal humano para resolver preguntas que una FAQ podría responder en 30 segundos. Para el usuario es fricción antes de contactar; para el equipo comercial es tiempo del asesor invertido en preguntas informativas en lugar de preguntas de cierre.
-
-**Conexión con [[03_detalle-proyecto#H-DETALLE-09]].**
-
-[[03_detalle-proyecto#H-DETALLE-09]] documenta que *"subsidio disponible"* en la página de detalle no ofrece contexto — el usuario debe salir del sitio a buscarlo en Google. H-FORM-08 es la misma necesidad en el siguiente paso del funnel: el usuario con dudas no encuentra respuesta aquí tampoco. Dos fallas consecutivas del principio P10 en el mismo camino de conversión.
-
-**Las 5 preguntas que deberían estar en el flujo de contacto:**
-
-| Pregunta | Por qué es crítica en este punto |
-|----------|----------------------------------|
-| ¿Cómo aplico al subsidio Mi Casa Ya? | Factor decisivo para compradores VIS |
-| ¿Cuánto es la cuota inicial? | Determina si el proyecto es financieramente alcanzable |
-| ¿Qué documentos necesito para apartar? | El usuario en fase de decisión necesita saber qué sigue |
-| ¿Cuándo se entrega el proyecto? | Crítico para evaluar si encaja en su plan de vida |
-| ¿Puedo comprar si tengo un crédito vigente? | Barrera frecuente en compradores primerizos colombianos |
-
 ---
 
 ### H-FORM-09 — WhatsApp existe en el detalle pero está ausente en el homepage y el listado
@@ -322,10 +296,10 @@ Email: info@prodesa.com
 
 | Severidad | Cantidad | IDs |
 |-----------|----------|-----|
-| 🔴 Crítico (3) | 3 | H-FORM-01, H-FORM-03, H-FORM-09 |
-| 🟡 Importante (2) | 5 | H-FORM-02, H-FORM-04, H-FORM-05, H-FORM-06, H-FORM-07 |
-| 🟢 Menor (1) | 1 | H-FORM-08 |
-| **Total** | **9** | |
+| 🔴 Crítico (3) | 1 | H-FORM-03 |
+| 🟡 Importante (2) | 7 | H-FORM-01, H-FORM-02, H-FORM-04, H-FORM-05, H-FORM-06, H-FORM-07, H-FORM-09 |
+| 🟢 Menor (1) | 0 | — |
+| **Total** | **8** | |
 
 ---
 
@@ -333,7 +307,7 @@ Email: info@prodesa.com
 
 | Hipótesis | Hallazgos relacionados | Confirma / Refuta |
 |-----------|------------------------|-------------------|
-| [[H3A]] — Arquitectura de información | H-FORM-07, H-FORM-08 | ✅ Confirma: FAQ desconectada del flujo y falta de contexto en formularios genéricos |
+| [[H3A]] — Arquitectura de información | H-FORM-07 | ✅ Confirma: falta de contexto en formularios — el formulario no transmite el proyecto al CRM |
 | [[H3B]] — CTAs ambiguos | H-FORM-01, H-FORM-06, H-FORM-09 | ✅ Confirma fuertemente: No hay confirmación post-envío, no hay elección de canal, ausencia de WhatsApp |
 | [[H3C]] — Experiencia mobile | H-FORM-03, H-FORM-09 | ✅ Confirma: Validación post-submit y ausencia de WhatsApp son especialmente críticos en mobile |
 
