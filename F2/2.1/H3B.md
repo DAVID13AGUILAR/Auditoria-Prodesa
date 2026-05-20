@@ -15,7 +15,7 @@ aliases:
 
 **Hipótesis:** Los CTAs del sitio no comunican claramente la acción ni el canal de contacto, reduciendo la conversión en el momento de mayor intención del usuario.
 
-**Estado:** ✅ **Confirmada fuertemente** — 10 hallazgos la respaldan con evidencia visual
+**Estado:** ✅ **Confirmada fuertemente** — 14 hallazgos la respaldan con evidencia visual
 
 ---
 
@@ -23,10 +23,10 @@ aliases:
 
 | Sección | Hallazgos |
 |---------|-----------|
-| [[01_homepage]] | [[01_homepage#H-HOME-09\|H-HOME-09]] (hero sin propuesta de valor ni H1 visible) |
-| [[02_busqueda-filtros]] | [[02_busqueda-filtros#H-FILTROS-06\|H-FILTROS-06]] (asterisco ambiguo en precio, sin estado del proyecto en tarjetas) |
+| [[01_homepage]] | [[01_homepage#H-HOME-04\|H-HOME-04]] (VIS/VIP sin definición — etiquetas ambiguas bloquean la decisión del comprador), [[01_homepage#H-HOME-09\|H-HOME-09]] (hero sin propuesta de valor ni H1 visible) |
+| [[02_busqueda-filtros]] | [[02_busqueda-filtros#H-FILTROS-02\|H-FILTROS-02]] (VIS/NO VIS sin tooltip — vocabulario opaco en el punto de filtrado activo), [[02_busqueda-filtros#H-FILTROS-06\|H-FILTROS-06]] (asterisco ambiguo en precio, sin estado del proyecto en tarjetas) |
 | [[03_detalle-proyecto]] | [[03_detalle-proyecto#H-DETALLE-01\|H-DETALLE-01]] (H1 redundante, precio visualmente domina sobre nombre), [[03_detalle-proyecto#H-DETALLE-02\|H-DETALLE-02]] (precio y área con idéntico peso visual), [[03_detalle-proyecto#H-DETALLE-03\|H-DETALLE-03]] (CTAs "Descargar brochure" y "Compartir" sin contacto directo), [[03_detalle-proyecto#H-DETALLE-05\|H-DETALLE-05]] (datos clave requieren scroll, fecha de entrega ausente), [[03_detalle-proyecto#H-DETALLE-08\|H-DETALLE-08]] (sin chip de estado del proyecto) |
-| [[04_formulario-contacto]] | [[04_formulario-contacto#H-FORM-01\|H-FORM-01]] (confirmación post-envío incompleta — expone correo, sin próximo paso), [[04_formulario-contacto#H-FORM-06\|H-FORM-06]] (canales con implementación deficiente — CTA engañoso, reCAPTCHA), [[04_formulario-contacto#H-FORM-09\|H-FORM-09]] (WhatsApp con cobertura parcial — ausente en homepage y listado) |
+| [[04_formulario-contacto]] | [[04_formulario-contacto#H-FORM-01\|H-FORM-01]] (confirmación post-envío incompleta — expone correo, sin próximo paso), [[04_formulario-contacto#H-FORM-02\|H-FORM-02]] (6 campos obligatorios incluyendo cédula — exceso de fricción reduce conversión del formulario), [[04_formulario-contacto#H-FORM-04\|H-FORM-04]] (mensajes de error en MAYÚSCULAS — no orientan la corrección), [[04_formulario-contacto#H-FORM-06\|H-FORM-06]] (canales con implementación deficiente — CTA engañoso, reCAPTCHA), [[04_formulario-contacto#H-FORM-09\|H-FORM-09]] (WhatsApp con cobertura parcial — ausente en homepage y listado) |
 
 ---
 

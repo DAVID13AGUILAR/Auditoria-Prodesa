@@ -14,7 +14,7 @@ aliases:
 
 **Hipótesis:** Los problemas en la arquitectura de información y navegación afectan la capacidad del usuario de encontrar el proyecto correcto, reduciendo la conversión.
 
-**Estado:** ✅ **Confirmada** — 9 hallazgos activos la respaldan (H-FILTROS-04 y H-DETALLE-04 eliminados tras validación)
+**Estado:** ✅ **Confirmada** — 13 hallazgos activos la respaldan (H-FILTROS-04 y H-DETALLE-04 eliminados tras validación)
 
 ---
 
@@ -22,10 +22,10 @@ aliases:
 
 | Sección | Hallazgos |
 |---------|-----------|
-| [[01_homepage]] | [[01_homepage#H-HOME-02\|H-HOME-02]] (doble nav mezcla audiencias), [[01_homepage#H-HOME-03\|H-HOME-03]] ("Invertir desde el exterior" en mismo nivel), [[01_homepage#H-HOME-07\|H-HOME-07]] (sin breadcrumbs en ninguna página) |
-| [[02_busqueda-filtros]] | [[02_busqueda-filtros#H-FILTROS-03\|H-FILTROS-03]] ("Limpiar filtros" reinicia a defaults, no limpia), [[02_busqueda-filtros#H-FILTROS-05\|H-FILTROS-05]] (empty state invisible), [[02_busqueda-filtros#H-FILTROS-07\|H-FILTROS-07]] (filtro VIS/NO VIS ausente en web, defaults invisibles) |
-| [[03_detalle-proyecto]] | [[03_detalle-proyecto#H-DETALLE-06\|H-DETALLE-06]] (sin plantilla estandarizada — validado en Pietra vs. Orizzo), [[03_detalle-proyecto#H-DETALLE-07\|H-DETALLE-07]] (filtros se pierden al volver al listado), [[03_detalle-proyecto#H-DETALLE-09\|H-DETALLE-09]] ("subsidio disponible" sin contexto — P10 ayuda y documentación) |
-| [[04_formulario-contacto]] | [[04_formulario-contacto#H-FORM-07\|H-FORM-07]] (formulario no transmite proyecto al CRM), [[04_formulario-contacto#H-FORM-08\|H-FORM-08]] (FAQ desconectada del flujo de contacto) |
+| [[01_homepage]] | [[01_homepage#H-HOME-02\|H-HOME-02]] (doble nav mezcla audiencias), [[01_homepage#H-HOME-03\|H-HOME-03]] ("Invertir desde el exterior" en mismo nivel), [[01_homepage#H-HOME-04\|H-HOME-04]] (VIS/VIP sin definición — el usuario no puede self-qualificarse), [[01_homepage#H-HOME-07\|H-HOME-07]] (sin breadcrumbs en ninguna página) |
+| [[02_busqueda-filtros]] | [[02_busqueda-filtros#H-FILTROS-01\|H-FILTROS-01]] (sin contador de resultados — el usuario no sabe en qué estado está la búsqueda), [[02_busqueda-filtros#H-FILTROS-02\|H-FILTROS-02]] (VIS/NO VIS sin tooltip — vocabulario opaco en el punto de búsqueda activa), [[02_busqueda-filtros#H-FILTROS-03\|H-FILTROS-03]] ("Limpiar filtros" reinicia a defaults, no limpia), [[02_busqueda-filtros#H-FILTROS-05\|H-FILTROS-05]] (empty state invisible), [[02_busqueda-filtros#H-FILTROS-07\|H-FILTROS-07]] (filtro VIS/NO VIS ausente en web, defaults invisibles) |
+| [[03_detalle-proyecto]] | [[03_detalle-proyecto#H-DETALLE-06\|H-DETALLE-06]] (sin plantilla estandarizada — validado en Pietra vs. Orizzo), [[03_detalle-proyecto#H-DETALLE-07\|H-DETALLE-07]] (filtros se pierden al volver al listado), [[03_detalle-proyecto#H-DETALLE-09\|H-DETALLE-09]] ("subsidio disponible" sin contexto) |
+| [[04_formulario-contacto]] | [[04_formulario-contacto#H-FORM-07\|H-FORM-07]] (formulario no transmite proyecto al CRM) |
 
 *H-FILTROS-04 y H-DETALLE-04 eliminados tras validación — las URLs son consistentes y los redirects son comportamiento correcto.*
 

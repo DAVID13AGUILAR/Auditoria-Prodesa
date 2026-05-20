@@ -15,7 +15,7 @@ aliases:
 
 **Hipótesis:** La versión mobile del sitio tiene problemas adicionales o amplificados que generan mayor tasa de abandono respecto a la versión desktop.
 
-**Estado:** ✅ **Confirmada** — 10 hallazgos validados con capturas en desktop y mobile.
+**Estado:** ✅ **Confirmada** — 12 hallazgos validados con capturas en desktop y mobile.
 
 ---
 
@@ -23,10 +23,10 @@ aliases:
 
 | Sección | Hallazgos |
 |---------|-----------|
-| [[01_homepage]] | [[01_homepage#H-HOME-01\|H-HOME-01]] (SPA sin SSR — pantalla en blanco crítica en conexiones móviles lentas), [[01_homepage#H-HOME-02\|H-HOME-02]] (doble nav amplificada en pantallas pequeñas) |
+| [[01_homepage]] | [[01_homepage#H-HOME-01\|H-HOME-01]] (SPA sin SSR — pantalla en blanco crítica en conexiones móviles lentas), [[01_homepage#H-HOME-02\|H-HOME-02]] (doble nav amplificada en pantallas pequeñas), [[01_homepage#H-HOME-06\|H-HOME-06]] (Google Play link roto — bloquea al 70% de usuarios Android en Colombia) |
 | [[02_busqueda-filtros]] | [[02_busqueda-filtros#H-FILTROS-07\|H-FILTROS-07]] (filtro VIS/NO VIS solo disponible en mobile, ausente en web), [[02_busqueda-filtros#H-FILTROS-09\|H-FILTROS-09]] (spinner con delay + scroll manual al cargar resultados) |
 | [[03_detalle-proyecto]] | [[03_detalle-proyecto#H-DETALLE-01\|H-DETALLE-01]] (chip "Proyecto de vivienda" duplicado en mobile, redundancia doble), [[03_detalle-proyecto#H-DETALLE-02\|H-DETALLE-02]] (en mobile el listado diferencia precio y área; el detalle no), [[03_detalle-proyecto#H-DETALLE-06\|H-DETALLE-06]] (6 inconsistencias Pietra vs. Orizzo confirmadas en mobile) |
-| [[04_formulario-contacto]] | [[04_formulario-contacto#H-FORM-02\|H-FORM-02]] (6 campos obligatorios incluyendo cédula — carga excesiva en teclado táctil), [[04_formulario-contacto#H-FORM-03\|H-FORM-03]] (validación post-submit más frustrante en mobile, aunque errores son más visibles sin scroll), [[04_formulario-contacto#H-FORM-09\|H-FORM-09]] (WhatsApp ausente en homepage y listado — canal nativo del usuario mobile) |
+| [[04_formulario-contacto]] | [[04_formulario-contacto#H-FORM-02\|H-FORM-02]] (6 campos obligatorios incluyendo cédula — carga excesiva en teclado táctil), [[04_formulario-contacto#H-FORM-03\|H-FORM-03]] (validación post-submit más frustrante en mobile, aunque errores son más visibles sin scroll), [[04_formulario-contacto#H-FORM-04\|H-FORM-04]] (mensajes en MAYÚSCULAS — ocupan más espacio relativo en pantalla pequeña, tono más agresivo), [[04_formulario-contacto#H-FORM-09\|H-FORM-09]] (WhatsApp ausente en homepage y listado — canal nativo del usuario mobile) |
 
 ---
 
