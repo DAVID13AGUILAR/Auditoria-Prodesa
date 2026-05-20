@@ -13,6 +13,9 @@ aliases:
 **URLs evaluadas:**
 - https://prodesa.com/proyecto-vivienda/agora → redirect a `/proyecto-vivienda/cali/agora`
 - https://prodesa.com/proyecto-vivienda/centrico
+- https://prodesa.com/proyecto-vivienda/bogota/pietra
+- https://prodesa.com/proyecto-vivienda/bogota/orizzo
+- https://prodesa.com/proyecto-vivienda/bogota/mirla
 - Patrón general de páginas de proyecto en prodesa.com
 
 **Fecha:** Mayo 2026
@@ -27,10 +30,10 @@ aliases:
 | H-DETALLE-02 | P6 - Reconocimiento + P8 - Minimalismo | Detalle proyecto / Hero — precio y área | **Corregido tras validación visual.** El precio sí aparece prominente en naranja — la premisa del "texto corrido" era incorrecta. El problema real es de **jerarquía interna entre precio y área**: en la página de detalle ambos datos aparecen con idéntico peso visual (mismo tamaño, mismo color naranja, mismo estilo tipográfico). El precio es el dato más determinante para la decisión de compra; el área es secundario. Al tener igual peso visual, el usuario no recibe ninguna señal de qué dato priorizar. Contraste: en las tarjetas del listado mobile, el precio sí tiene más peso visual que el área (naranja más grande vs. texto gris más pequeño) — la diferenciación correcta existe en el listado pero desaparece en el detalle. | ✅ validado en Mirla y Ágora (desktop y mobile) | 2 🟡 | El precio debe tener claramente mayor tamaño tipográfico que el área. El área pasa a un segundo nivel visual: tipografía más pequeña o color menos saturado. La jerarquía correcta es: nombre del proyecto → precio → área → datos secundarios (habitaciones, fecha de entrega). |
 | H-DETALLE-03 | P3 - Control del usuario + P8 - Minimalismo | Detalle proyecto / Sección "Acerca del proyecto" — desktop | **Reformulado tras validación visual. Problema exclusivo de desktop.** La sección "Acerca del proyecto" cierra con dos CTAs: **"Descargar brochure"** (botón naranja relleno — CTA primario visual) y **"Compartir"** (botón outline — CTA secundario). En desktop, el canal de contacto más cercano es el formulario en la columna derecha — estructuralmente separado del texto, no integrado en la sección. Dos problemas: (1) **Desconexión contextual en desktop**: el usuario termina de leer la descripción y debe cambiar de columna para contactar — fricción entre el momento de intención y la acción disponible. (2) **Jerarquía invertida en ambas versiones**: "Descargar brochure" (intención media) recibe el CTA primario visual; el contacto directo (intención alta) no tiene representación en la sección. **En mobile no aplica el problema de desconexión**: la barra sticky con WhatsApp, "Agenda tu cita" y "Déjanos tus datos" es persistente durante todo el scroll — el usuario siempre tiene acceso inmediato sin interrumpir su flujo de lectura. | ✅ validado en Ágora desktop y Praseo mobile | 2 🟡 | En desktop: añadir CTA de contacto directo al final de la sección "Acerca del proyecto" (*"Escríbenos por WhatsApp"*) con tratamiento primario; "Descargar brochure" pasa a secundario. En mobile: el patrón actual de barra sticky funciona correctamente — mantener. |
 | H-DETALLE-05 | P6 - Reconocimiento + P1 - Visibilidad | Detalle proyecto / Ficha técnica | **Corregido tras validación visual.** La información de habitaciones, m² y precio detallado sí existe — aparece en la sección "Inmuebles disponibles" con formato de fichas visuales. El problema es doble: (1) **Ubicación**: estos datos requieren scroll para encontrarse — no están en el hero ni en el primer fold, obligando al usuario a buscar activamente información básica de decisión. (2) **Dato ausente crítico**: la **fecha estimada de entrega** no aparece en ningún lugar de la página — ni en el hero, ni en la ficha técnica, ni en las especificaciones. Para un comprador, saber si el proyecto entrega en 6 meses o en 3 años es determinante. Su ausencia impide que el usuario evalúe si el proyecto encaja en su plan de vida. | ✅ validado en Ágora desktop — sección "Inmuebles disponibles" | 2 🟡 | (1) Subir los datos clave (habitaciones, m², precio) al hero — visibles sin scroll junto al nombre del proyecto. (2) Añadir fecha estimada de entrega como campo obligatorio en la ficha técnica, en formato claro: *"Entrega estimada: 2do semestre 2026"*. |
-| H-DETALLE-06 | P4 - Consistencia | Múltiples proyectos / Diseño | Prodesa tiene más de 15 proyectos activos. Sin una plantilla de página de detalle estrictamente estandarizada, **la experiencia puede variar entre proyectos**: algunos pueden tener más fotos, otros más texto, otros sin precio visible. Esta inconsistencia genera desconfianza y obliga al usuario a "reaprender" la interfaz en cada proyecto. | pendiente | 2 | Definir y aplicar una plantilla única de página de proyecto: hero con imagen + precio + CTA, ficha técnica, galería, mapa, formulario de interés. Todos los proyectos deben seguir exactamente el mismo layout. |
-| H-DETALLE-07 | P3 - Control del usuario | Detalle proyecto / Navegación de regreso | En el flujo homepage → listado → detalle, el usuario debe poder **regresar al listado manteniendo sus filtros activos**. Si al volver al listado los filtros se pierden, el usuario tiene que reconfigurar su búsqueda desde cero, lo que genera frustración y abandono. | pendiente | 2 | Implementar navegación "breadcrumb + back" que preserve el estado de los filtros al regresar al listado. Usar parámetros en la URL para persistir el estado de la búsqueda. |
-| H-DETALLE-08 | P1 - Visibilidad | Detalle proyecto / Estado del proyecto | No se detecta en los metadatos o en la estructura del HTML un campo visible de **estado del proyecto** (En preventa / En construcción / Listo para entrega / Agotado). Para el comprador, esta es información crítica que afecta directamente la decisión. | pendiente | 3 | Mostrar el estado del proyecto de forma prominente y visible (ej. chip de color: 🟢 Disponible / 🟡 Últimas unidades / 🔴 Agotado) en el hero de la página y en la tarjeta del listado. |
-| H-DETALLE-09 | P10 - Ayuda y documentación | Detalle proyecto / Información de subsidios | La meta-descripción menciona *"subsidio disponible"* pero no ofrece contexto sobre **qué subsidio, a quién aplica, ni cómo acceder a él**. El proceso de subsidio de vivienda en Colombia es complejo (Mi Casa Ya, Caja de Compensación, etc.) y los compradores primerizo necesitan orientación en este punto. | pendiente | 2 | Incluir en la página de detalle una sección o acordeón de "¿Puedo acceder al subsidio?" con criterios básicos de elegibilidad y un CTA a "Consultar con asesor". Esto también aumenta el número de leads calificados. |
+| H-DETALLE-06 | P4 - Consistencia | Múltiples proyectos / Diseño — validado en Pietra vs. Orizzo | Prodesa tiene más de 15 proyectos activos. La comparación directa entre **Pietra** y **Orizzo** evidencia 6 inconsistencias concretas: (1) **Galería**: Orizzo ofrece 5 fotos + Recorrido 360° + Avances de obra + Ubicación + Maqueta; Pietra ofrece solo 2 fotos + Urbanismo. (2) **Brochure**: Pietra no permite descargar brochure; Orizzo sí. (3) **Lista de incluidos**: Pietra no tiene la lista de lo que incluye el apartamento; Orizzo sí. (4) **Mapa**: Pietra da dos opciones de navegación (llegar a zona de ventas + llegar al proyecto); Orizzo da solo una (llegar a la sala de ventas). (5) **CTAs de contacto**: Pietra ofrece únicamente "Agendar tu cita en sala"; Orizzo ofrece 3 opciones de contacto. (6) **Proyectos similares**: Orizzo muestra sección de proyectos similares al final; Pietra no la tiene. El usuario que compara ambos proyectos encuentra interfaces estructuralmente distintas y debe "reaprender" la página en cada proyecto. | ✅ validado en Pietra y Orizzo | 2 🟡 | Definir y aplicar una plantilla única de página de proyecto con secciones obligatorias: galería con tabs estandarizados, descarga de brochure, lista de incluidos, mapa con ambas opciones de navegación, mínimo 2 CTAs de contacto, y sección de proyectos similares. Todos los proyectos deben seguir exactamente el mismo layout. |
+| H-DETALLE-07 | P3 - Control del usuario | Detalle proyecto / Navegación de regreso | En el flujo homepage → listado → detalle, el usuario debe poder **regresar al listado manteniendo sus filtros activos**. Si al volver al listado los filtros se pierden, el usuario tiene que reconfigurar su búsqueda desde cero, lo que genera frustración y abandono. | ✅ validado con capturas antes/después de navegar al detalle | 2 🟡 | Implementar navegación "breadcrumb + back" que preserve el estado de los filtros al regresar al listado. Usar parámetros en la URL para persistir el estado de la búsqueda. |
+| H-DETALLE-08 | P1 - Visibilidad | Detalle proyecto / Estado del proyecto | No se detecta en los metadatos o en la estructura del HTML un campo visible de **estado del proyecto** (En preventa / En construcción / Listo para entrega / Agotado). Para el comprador, esta es información crítica que afecta directamente la decisión. | ✅ validado en hero del proyecto — sin chip de estado visible | 3 🔴 | Mostrar el estado del proyecto de forma prominente y visible (ej. chip de color: 🟢 Disponible / 🟡 Últimas unidades / 🔴 Agotado) en el hero de la página y en la tarjeta del listado. |
+| H-DETALLE-09 | P10 - Ayuda y documentación | Detalle proyecto / Información de subsidios | La meta-descripción menciona *"subsidio disponible"* pero no ofrece contexto sobre **qué subsidio, a quién aplica, ni cómo acceder a él**. El proceso de subsidio de vivienda en Colombia es complejo (Mi Casa Ya, Caja de Compensación, etc.) y los compradores primerizos necesitan orientación en este punto. | ✅ validado en Mirla — desktop y mobile | 2 🟡 | Incluir en la página de detalle una sección o acordeón de "¿Puedo acceder al subsidio?" con criterios básicos de elegibilidad y un CTA a "Consultar con asesor". Esto también aumenta el número de leads calificados. |
 
 ---
 
@@ -143,19 +146,61 @@ La ausencia de este dato no es menor: en el mercado colombiano de vivienda, los 
 
 ---
 
-### H-DETALLE-06 — Sin plantilla estandarizada entre proyectos
+### H-DETALLE-06 — Sin plantilla estandarizada entre proyectos — validado en Pietra vs. Orizzo
 
 **¿Por qué es importante solucionarlo?**
 
-Prodesa tiene más de 15 proyectos activos distribuidos en 16 ciudades. Si cada página de proyecto fue construida o editada de forma independiente, sin una plantilla estricta, la experiencia puede variar significativamente entre proyectos: algunos tendrán más fotos, otros más texto, algunos mostrarán el precio arriba y otros abajo, algunos tendrán mapa y otros no.
+Prodesa tiene más de 15 proyectos activos distribuidos en 16 ciudades. La comparación directa entre **Pietra** y **Orizzo** confirma que las páginas de proyecto no siguen una plantilla común — la experiencia varía de forma significativa entre proyectos en al menos 6 dimensiones críticas.
 
-**El problema de la inconsistencia para el usuario.** Cuando el usuario compara dos proyectos — lo cual es casi universal en un proceso de compra de vivienda — necesita poder hacer esa comparación sin tener que "reaprender" la página en cada proyecto. Si Mirla muestra el precio en la descripción y Ágora lo muestra en una ficha técnica, y Céntrico no lo muestra hasta el tercer scroll, el usuario está invirtiendo energía cognitiva en navegar la interfaz en lugar de en evaluar los proyectos. Esa energía cognitiva es limitada y su consumo innecesario aumenta la probabilidad de abandono.
+---
 
-**El impacto en la confianza.** Una interfaz inconsistente comunica desorganización. Un comprador que está tomando la decisión más importante de su vida financiera necesita confiar en que la empresa a la que le va a entregar sus ahorros es ordenada y profesional. La inconsistencia en las páginas de proyecto genera una señal de alarma inconsciente.
+**Las 6 inconsistencias concretas detectadas (Pietra vs. Orizzo)**
 
-**El problema sistémico.** La ausencia de plantilla no es solo un problema de UX — es un problema de gobernanza de contenidos. Si el equipo de marketing de Prodesa puede editar cada página de proyecto de forma independiente, cada publicación nueva reproduce la inconsistencia. La solución no es solo de diseño sino de sistema de gestión de contenidos (CMS) que fuerce la estructura.
+**1. Galería y navegación de contenido multimedia**
 
-**Cómo evidenciarlo:** captura side-by-side de dos proyectos distintos (ej. Mirla y Ágora) mostrando diferencias en la posición o presencia del precio, la ficha técnica o los CTAs.
+Orizzo ofrece 5 opciones de navegación en la sección de galería: *Fotos (5), Recorrido 360°, Avances de obra, Ubicación, Maqueta.* Pietra ofrece únicamente 2: *Fotos (2), Urbanismo.* La brecha no es solo cuantitativa — Orizzo tiene contenido que aumenta la confianza del comprador (el recorrido 360° y los avances de obra responden preguntas que solo un asesor podría resolver de otra forma). Que Pietra no tenga ese contenido puede reflejar una limitación real del proyecto, pero la ausencia de una estructura de tabs estandarizada impide saber si el contenido falta o simplemente no fue publicado.
+
+**2. Descarga de brochure**
+
+Pietra no ofrece la opción de descargar el brochure del proyecto. Orizzo sí. El brochure es el primer documento que el comprador lleva para consultar con su familia o pareja — es una herramienta de cierre diferido. Su ausencia en Pietra no es neutral: el usuario que quiere documentarse antes de tomar una decisión no tiene forma de hacerlo sin contactar a un asesor, lo que introduce fricción en una etapa donde el comprador todavía está evaluando.
+
+**3. Lista de lo que incluye el apartamento**
+
+Orizzo incluye en su página una sección con la lista de elementos incluidos en el apartamento (acabados, equipamiento, especificaciones). Pietra no tiene esta sección. Para un comprador que compara proyectos en rango de precio similar, saber exactamente qué viene incluido es determinante — un precio aparentemente más alto puede ser más competitivo si incluye más elementos. Sin esa información visible en Pietra, el comprador no puede hacer esa comparación desde la página.
+
+**4. Mapa — opciones de navegación**
+
+Pietra ofrece dos destinos desde el mapa: *"Llegar a zona de ventas"* y *"Llegar al proyecto"* — diferenciando correctamente la sala de ventas del terreno o edificio en construcción. Orizzo ofrece solo una opción: *"Llegar a la sala de ventas"*. En este punto concreto, Pietra tiene mejor implementación que Orizzo. La inconsistencia sigue siendo un problema de plantilla — la opción correcta debería estar presente en todos los proyectos, no solo en algunos.
+
+**5. CTAs de contacto**
+
+En la sección de contacto, Pietra ofrece una única opción: *"Agendar tu cita en sala"*. Orizzo ofrece 3 opciones de contacto. Reducir los canales de contacto a uno solo en Pietra elimina opciones para usuarios con diferentes preferencias de comunicación. Un comprador que no puede o no quiere agendar una cita en sala en ese momento no tiene alternativa en Pietra — en Orizzo sí la tendría. Esta diferencia puede traducirse directamente en leads perdidos.
+
+**6. Sección de proyectos similares**
+
+Orizzo finaliza su página con una sección de proyectos similares, permitiendo al usuario continuar explorando el catálogo de Prodesa sin salir del sitio. Pietra no tiene esta sección. La ausencia en Pietra es una oportunidad perdida de retención: el usuario que terminó de revisar Pietra y no encontró lo que buscaba no tiene un siguiente paso sugerido — probablemente abandona el sitio en lugar de explorar otro proyecto.
+
+---
+
+**El problema de la inconsistencia para el usuario**
+
+Cuando un comprador compara Pietra y Orizzo, no está comparando solo los proyectos — está comparando dos interfaces estructuralmente distintas. La información disponible en una página no existe en la otra, los CTAs son diferentes, el mapa tiene opciones distintas. Esa variabilidad obliga al usuario a invertir energía cognitiva en navegar la interfaz en lugar de en evaluar los proyectos. Esa energía cognitiva es limitada y su consumo innecesario es una de las causas más documentadas de abandono en portales inmobiliarios.
+
+**El impacto en la confianza**
+
+Una interfaz inconsistente comunica desorganización. Un comprador que está tomando la decisión más importante de su vida financiera necesita confiar en que la empresa a la que le va a entregar sus ahorros es ordenada y profesional. Que dos proyectos del mismo catálogo tengan experiencias tan distintas genera una señal de alarma inconsciente.
+
+**El problema sistémico**
+
+La ausencia de plantilla no es solo un problema de diseño — es un problema de gobernanza de contenidos. Si el equipo de marketing puede editar cada página de forma independiente sin campos ni secciones obligatorias, cada proyecto publicado nuevo puede reproducir la inconsistencia. La solución correcta es técnica: un CMS con secciones fijas, campos obligatorios y validación antes de publicar.
+![[H-DETALLE-6_INCONSISTENCIA-PIETRA.png|281]]![[H-DETALLE-6_INCONSISTENCIA-ORIZZO.png|282]]![[H-DETALLE-6_INCONSISTENCIA_BROCHURE.png|281]]![[H-DETALLE-6_INCONSISTENCIA-BROCHURE.png|283]]
+![[H-DETALLE-6_INCONSISTENCIA_DESCRIPCION.png|282]]![[H-DETALLE-6_INCONSISTENCIA-DESCRIPCION.png|281]]![[H-DETALLE-6_INCONSISTENCIA-UBICACION.png|281]]![[H-DETALLE-6_INCONSISTENCIA.UBICACION.png|282]]
+![[H-DETALLE-6_INCONSISTENCIA-CONTACTANOS-SIMILARES.png|281]]![[H-DETALLE-6_INCONSISTENCIA-CONTACTANOS.SIMILARES.png|283]]
+**Presencia en versión mobile**
+![[H-DETALLE-6_INCONSISTENCIA-GALERIA-MOBILE.png|95]]![[H-DETALLE-6_INCONSISTENCIA-MOBILE.png|96]]![[H-DETALLE-6_INCONSISTENCIA_CTA.png|96]]![[H-DETALLE-6_INCONSISTENCIA-CTA-BROCHURE.png|96]]![[H-DETALLE-6_INCONSISTENCIA_DETALLE-MOBILE.png|96]]![[H-DETALLE-6_INCONSISTENCIA-DETALLE.MOBILE.png|96]]![[H-DETALLE-6_INCONSISTENCIA-UBICACION.MOBILE.png|97]]![[H-DETALLE-6_INCONSISTENCIA-UBICACION-MOBILE.png|95]]![[H-DETALLE-6_INCONSISTENCIA_CONTACTANOS.MOBILE.png|95]]![[H-DETALLE-6_INCONSISTENCIA_CONTACTO.MOBILE.png|95]]![[H-DETALLE-6_INCONSISTENCIA-SIMILARES.MOBILE.png|95]]
+
+Las inconsistencias no se limitan a la versión desktop — se replican y en algunos casos se agravan en mobile. La galería y sus tabs de navegación son el primer elemento de interacción visual tras el hero en mobile; que Pietra tenga solo 2 opciones frente a las 5 de Orizzo es aún más notorio en pantalla pequeña, donde el usuario escanea el contenido disponible de forma más selectiva. La ausencia de proyectos similares en Pietra mobile elimina el único punto de salida interno que retendría al usuario dentro del sitio. Los CTAs de contacto reducidos en Pietra también impactan de forma especial en mobile: el usuario en móvil tiene preferencia por canales de baja fricción como WhatsApp o llamada directa — si Pietra solo ofrece "Agendar tu cita en sala", está desaprovechando el canal más natural del dispositivo. La inconsistencia es transversal a ambas versiones.
+
 
 ---
 
@@ -171,7 +216,8 @@ El flujo natural de un usuario que busca vivienda es: aplica filtros en el lista
 
 **La solución técnica es estándar.** Persistir el estado de los filtros al navegar entre el listado y el detalle es un comportamiento esperado en cualquier e-commerce moderno. Se implementa pasando los parámetros de filtro en la URL (ej. `/proyecto-vivienda?ciudad=bogota&precio-max=300M`) o almacenándolos en el estado de sesión del navegador. Es una práctica tan común que su ausencia es notada inmediatamente por usuarios habituados a portales como Mercado Libre o Airbnb.
 
-**Cómo evidenciarlo:** (1) aplicar un filtro en el listado, (2) entrar al detalle de un proyecto, (3) usar el botón "atrás" del navegador o cualquier link de regreso al listado, (4) capturar el estado del listado mostrando que los filtros están en blanco o en valores default.
+**Conexión con [[H-FILTROS-03]].** H-FILTROS-03 documenta que el botón "Limpiar filtros" ya falla por sí solo — reinicia a valores default en lugar de vaciar los campos, de forma silenciosa y sin aviso. H-DETALLE-07 es una segunda capa del mismo problema de gestión de estado: el sistema tampoco preserva los filtros al navegar entre páginas. Son dos fallas distintas del mismo componente — una se activa al limpiar manualmente, la otra al navegar al detalle y volver. Juntas, configuran un sistema de filtros que ni limpia correctamente ni recuerda lo que el usuario configuró.
+![[H-DETALLE-7_FILTRO..png|334]]![[H-DETALLE-7_FILTRO.DEFAULT.png|334]]
 
 ---
 
@@ -186,8 +232,7 @@ Este es el segundo hallazgo más crítico de la sección. El estado del proyecto
 **El benchmark del sector.** Todas las constructoras con presencia digital madura muestran el estado del proyecto de forma prominente: un chip de color en el hero de la página y en la tarjeta del listado. El código de color es intuitivo: verde para disponible, amarillo para últimas unidades, rojo para agotado, azul o gris para preventa. Este patrón es tan estándar que su ausencia genera confusión — el usuario asume que si no dice nada, el proyecto está disponible, lo cual puede ser una información incorrecta.
 
 **El impacto en la confianza y en la gestión comercial.** Un proyecto agotado que no dice que está agotado genera leads de usuarios que no van a poder comprar. Eso cuesta tiempo al equipo comercial de Prodesa y genera frustración en los usuarios que descubren la realidad después de hacer contacto. Un proyecto en preventa sin fecha de entrega visible genera expectativas incorrectas. La ausencia de estado no es neutral — es una fuente activa de malentendidos.
-
-**Cómo evidenciarlo:** captura del hero de la página de detalle mostrando la ausencia de cualquier chip, badge o etiqueta que indique el estado del proyecto. Complementar con la tarjeta del listado para mostrar que la inconsistencia es transversal (tampoco está en el listado, ya documentado en H-FILTROS-06).
+![[H-DETALLE-8_FALTA-INFORMACION-ESTADO.png|373]]
 
 ---
 
@@ -203,7 +248,35 @@ La meta-descripción de proyectos como Mirla menciona *"subsidios disponibles ha
 
 **La oportunidad que se está perdiendo.** Para el segmento VIS, el subsidio *Mi Casa Ya* puede representar hasta $42.7M — casi el 28% del precio de un apartamento de $150M. Eso es un argumento de venta poderoso. Un usuario que entiende que puede acceder a ese beneficio tiene una motivación adicional para avanzar en el proceso de compra. La página de detalle podría estar convirtiendo ese dato en un acelerador de conversión — pero para eso necesita explicarlo, no solo mencionarlo.
 
-**Cómo evidenciarlo:** captura de la descripción del proyecto Mirla mostrando la mención del subsidio en el texto corrido, sin ningún tooltip, acordeón ni link que lleve a más información. Complementar con una captura de búsqueda en Google de "Mi Casa Ya requisitos" para ilustrar la cantidad de información que el usuario tendría que buscar por su cuenta.
+**Dónde debe ir la información del subsidio según versión**
+
+La solución correcta es diferente en desktop y en mobile porque los patrones de interacción son distintos en cada dispositivo.
+
+*En desktop — tooltip al lado del precio en el hero:*
+El usuario en desktop está procesando los números financieros en el hero (precio y área). El subsidio es un número que reduce directamente lo que tiene que pagar, así que su lugar natural es justo debajo del precio, con un ícono `ⓘ` que al pasar el cursor despliega la información:
+
+```
+Desde $150.000.000
+Subsidio Mi Casa Ya: hasta $42.7M  ⓘ
+```
+
+El tooltip muestra en una línea: qué subsidio es, el monto y un link a "Ver requisitos". El hover es el patrón de baja fricción correcto para desktop — no interrumpe el flujo de lectura y está disponible cuando el usuario lo necesita.
+
+*En mobile — acordeón después de "Acerca del proyecto":*
+En mobile no existe el hover, por lo que un tooltip no funciona. El patrón correcto es un acordeón ubicado justo después de la sección "Acerca del proyecto" y antes de "Inmuebles disponibles". El usuario que terminó de leer la descripción del proyecto ya sabe qué es — la siguiente pregunta natural es *"¿puedo pagarlo con subsidio?"*. El acordeón responde esa pregunta en el momento exacto en que surge:
+
+```
+¿Puedes acceder al subsidio?  ▼
+  → Tipo: Mi Casa Ya (gobierno nacional)
+  → Monto: hasta $42.7M
+  → Requisitos básicos: no ser propietario,
+    estar vinculado al sistema de salud/pensión
+  → [Consultar con un asesor si califico]
+```
+
+El acordeón además captura un CTA de conversión en el momento de mayor intención — cuando el usuario ya entendió el beneficio y quiere saber si aplica para él.
+![[H-DETALLE-9_SIN-TOOLTIP-WEB.png|520]]![[Pasted image 20260519020946.png|135]]
+
 
 ---
 
@@ -219,9 +292,12 @@ La meta-descripción de proyectos como Mirla menciona *"subsidios disponibles ha
 
 ## Notas de evaluación
 
-- Los hallazgos H-DETALLE-01, H-DETALLE-02, H-DETALLE-05 y H-DETALLE-08 requieren validación con capturas del sitio renderizado en browser.
-- H-DETALLE-03 y H-DETALLE-07 son verificables funcionalmente navegando el sitio en desktop y mobile.
-- **Prioridad de captura:** H-DETALLE-02 (precio), H-DETALLE-03 (CTA) y H-DETALLE-08 (estado del proyecto) son los más críticos para el informe.
+- Todos los hallazgos han sido validados con capturas del sitio renderizado en browser — desktop y mobile.
+- Proyectos validados: Ágora, Mirla, Céntrico, Pietra, Orizzo.
+- H-DETALLE-06 validado con comparación side-by-side Pietra vs. Orizzo en desktop y mobile.
+- H-DETALLE-07 validado con capturas del estado del listado antes y después de navegar al detalle.
+- H-DETALLE-08 validado con captura del hero mostrando ausencia de chip de estado.
+- H-DETALLE-09 validado con captura del hero de Mirla mostrando ausencia de información del subsidio junto al precio.
 
 ---
 
