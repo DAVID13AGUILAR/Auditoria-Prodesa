@@ -1,5 +1,5 @@
 ---
-status: en-progreso
+status: completado
 created: 2026-05-20
 tags:
   - prodesa
@@ -33,8 +33,8 @@ persona: Valentina Ríos — [[01_persona-valentina]]
 | [[03_homepage]] | Homepage | 2a, 2b, 2c | ✅ Completo |
 | [[04_busqueda-filtros]] | Búsqueda y filtros | 3a, 3b, 3c, 3d, 3e | ✅ Completo |
 | [[05_resultados]] | Resultados | 4a, 4b, 4c, 4d | ✅ Completo |
-| [[06_detalle-proyecto]] | Detalle del proyecto | 5a, 5b, 5c · 5d, 5e, 5f pendientes | 🔄 En progreso |
-| [[07_contacto]] | Contacto | 6a en adelante | ❌ Pendiente |
+| [[06_detalle-proyecto]] | Detalle del proyecto (Pietra) | 5a, 5b, 5c, 5d, 5e, 5f | ✅ Completo |
+| [[07_contacto]] | Contacto | 6a, 6b, 6c, 6d | ✅ Completo |
 
 ---
 
@@ -42,12 +42,15 @@ persona: Valentina Ríos — [[01_persona-valentina]]
 
 | Métrica | Valor |
 |---------|-------|
-| **Pasos completados** | 14 de ~20 estimados |
-| **Hallazgos 🔴 Críticos** | 4 (modal sin cierre · SPA sin JS · filtro VIS ausente desktop · filtros no persistentes) |
-| **Hallazgos 🟠 Importantes** | 18 (ver [[08_inventario-hallazgos]]) |
-| **¿Completó la tarea?** | **No** — Valentina no logra ver el precio real de un proyecto VIS sin contactar al vendedor |
-| **Punto de abandono más probable** | 1b (modal sin cierre) o contacto (cédula en formulario) |
-| **Hipótesis H3A** | Confirmada |
+| **Pasos completados** | 20 de 20 |
+| **Hallazgos 🔴 Críticos** | 11 — ver [[08_inventario-hallazgos]] |
+| **Hallazgos 🟠 Importantes** | 48 — ver [[08_inventario-hallazgos]] |
+| **Hallazgos 🟡 Menores** | 5 — ver [[08_inventario-hallazgos]] |
+| **Total de hallazgos** | 64 (CW-01 a CW-64) |
+| **¿Completó la tarea?** | **No** — 0 de 4 criterios de éxito cumplidos completamente. Precio real oculto en galería, Mi Casa Ya invisible, transporte a 6–7 scrolls, sin estado del proyecto |
+| **Nivel de esfuerzo** | 🔴 Muy alto — modal bloqueante, filtros no persistentes, comparación en 2 ventanas, cédula obligatoria en formulario |
+| **Punto de abandono más probable** | 1b (modal sin cierre) · 5b/5e (precio real y subsidio no encontrados) · 6b (cédula en formulario) |
+| **Hipótesis H3A** | ✅ Confirmada en todas las etapas del flujo |
 
 ---
 

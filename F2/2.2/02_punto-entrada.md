@@ -21,13 +21,17 @@ fase: "2.2"
 
 ## Contexto técnico
 
-| Campo | Registro |
-|-------|----------|
-| **URL exacto de llegada** | pendiente |
-| **¿Hay landing page de campaña?** | pendiente — verificar si el URL tiene parámetros UTM |
-| **FCP (First Contentful Paint)** | pendiente — medir en DevTools → Performance |
-| **TTI (Time to Interactive)** | pendiente — medir en DevTools → Performance |
-| **Referencia cruzada 2.5** | Comparar FCP y LCP obtenidos aquí con los datos de PageSpeed de la tarea 2.5 |
+| Campo                              | Registro                                                                                                                                                                                                                                                                         |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **URL exacto de llegada**          | https://prodesa.com/                                                                                                                                                                                                                                                             |
+| **¿Hay landing page de campaña?**  | Parcial — Instagram lleva a `prodesa.com/` sin landing dedicada. Google Ads SÍ usa parámetros UTM (`?kw=prodesa&cpn=22801670082&utm_term=prodesa`) pero apunta a la homepage, no a una página de campaña diferenciada. Sin personalización del mensaje según el canal de origen. |
+| **FCP (First Contentful Paint)**   | 🔴 **14,3 s** — umbral "malo": >3 s. Valentina en 4G espera 14 segundos para ver el primer contenido.                                                                                                                                                                            |
+| **LCP (Largest Contentful Paint)** | 🔴 **39,6 s** — umbral "malo": >4 s. El hero image tarda 40 segundos en cargar completamente.                                                                                                                                                                                    |
+| **Total Blocking Time**            | 🔴 **2.050 ms** — umbral "malo": >600 ms. El hilo principal está bloqueado más de 2 segundos — el sitio no responde a toques durante ese tiempo.                                                                                                                                 |
+| **CLS (Cumulative Layout Shift)**  | 🔴 **0,882** — umbral "malo": >0,25. Elementos se mueven visiblemente durante la carga — Valentina puede hacer clic en el lugar equivocado.                                                                                                                                      |
+| **Speed Index**                    | 🔴 **15,1 s** — umbral "malo": >4,3 s.                                                                                                                                                                                                                                           |
+| **Performance Score**              | 🔴 **3 / 100** — categoría crítica (0–49).                                                                                                                                                                                                                                       |
+| **Referencia cruzada 2.5**         | Estos datos deben cruzarse con el análisis completo de PageSpeed en la tarea 2.5. Confirman y cuantifican CW-50 → [[F2/2.1/05_inventario-final#H-HOME-01]]                                                                                                                       |
 
 ---
 
