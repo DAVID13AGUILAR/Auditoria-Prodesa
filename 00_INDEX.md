@@ -28,6 +28,7 @@ created: 2026-05-20
 ```
 📁 F2/
   📁 2.1/  → Evaluación Heurística (10 principios de Nielsen)
+  📁 2.2/  → Cognitive Walkthrough Flujo 1 (registro)
   📁 2.4/  → Accesibilidad WCAG 2.0
 📁 research/  → Evidencia y benchmarks de respaldo
 📁 assets/    → Capturas organizadas por sección
@@ -66,6 +67,24 @@ created: 2026-05-20
 
 ---
 
+### 2.2 · Cognitive Walkthrough — Flujo 1 (Registro)
+
+| Archivo | Descripción |
+|---------|-------------|
+| [[F2/2.2/00_plantilla\|Plantilla]] | Estructura base del CW |
+| [[F2/2.2/01_persona-valentina\|01 · Persona — Valentina]] | Perfil de usuario del flujo |
+| [[F2/2.2/02_punto-entrada\|02 · Punto de entrada]] | Análisis con métricas Lighthouse |
+| [[F2/2.2/02_walkthrough-registro\|02 · Walkthrough Registro]] | 20 pasos — 64 hallazgos |
+| [[F2/2.2/03_homepage\|03 · Homepage]] | CW — Homepage |
+| [[F2/2.2/04_busqueda-filtros\|04 · Búsqueda y Filtros]] | CW — Filtros |
+| [[F2/2.2/05_resultados\|05 · Resultados]] | CW — Listado de resultados |
+| [[F2/2.2/06_detalle-proyecto\|06 · Detalle de Proyecto]] | CW — Proyecto Pietra (Ibagué) |
+| [[F2/2.2/07_contacto\|07 · Contacto]] | CW — Formulario + conclusión de tarea |
+| [[F2/2.2/08_inventario-hallazgos\|08 · Inventario]] | 64 hallazgos CW-01 a CW-64 |
+| [[F2/2.2/09_reporte-tarea-2.2\|09 · Reporte]] | Reporte ejecutivo ❌ Pendiente |
+
+---
+
 ### 2.4 · Accesibilidad WCAG 2.0
 
 | Archivo | Descripción |
@@ -87,6 +106,12 @@ created: 2026-05-20
 - [[research/H8-visibilidad-estado-proyecto|H8 — Visibilidad estado proyecto]]
 - [[research/H-FORM-patrones-formulario-contacto|Patrones formulario contacto]]
 - [[research/H-FORM-canales-contacto-omnicanalidad|Canales contacto — Omnicanalidad]]
+- [[research/CW-metodologia-cognitive-walkthrough|CW — Metodología Cognitive Walkthrough]]
+- [[research/CW-filtro-precio-slider-usabilidad|CW — Filtro precio slider usabilidad]]
+- [[research/H-ICONOS-MOBILE-amenidades|Íconos decorativos en listas mobile]]
+- [[research/H-COMPARADOR-proyectos|Ausencia de comparador de proyectos]]
+- [[research/H-FORM-inconsistencia-campos-mobile-desktop|Formulario — Inconsistencia campos mobile/desktop]]
+- [[research/H-FORM-datos-falsos-calidad-leads|Formulario — Datos falsos y calidad de leads]]
 
 ---
 
@@ -106,6 +131,7 @@ created: 2026-05-20
 
 - [[CONTEXTO-CONVERSACION|Contexto general del proyecto]]
 - [[F2/2.1/CONTEXTO-NUEVO-CHAT|Handoff fase 2.1]]
+- [[F2/2.2/CONTEXTO-NUEVO-CHAT|Handoff fase 2.2]]
 - [[F2/2.4/CONTEXTO-NUEVO-CHAT|Handoff fase 2.4]]
 
 ---

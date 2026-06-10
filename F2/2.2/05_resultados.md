@@ -1,0 +1,32 @@
+﻿---
+status: completado
+created: 2026-05-20
+tags:
+  - prodesa
+  - cognitive-walkthrough
+  - resultados
+  - hallazgos
+aliases:
+  - CW Resultados
+fase: "2.2"
+---
+
+# 05 â€” Resultados
+**Persona:** [[01_persona-valentina]] â€” Valentina RÃ­os, 32 aÃ±os, BogotÃ¡, primera compradora VIS
+**URL evaluada:** https://prodesa.com/ (listado filtrado)
+**Dispositivo:** Mobile (375px) Â· Desktop (1440px) Â· Modo incÃ³gnito
+
+---
+
+## Registro de pasos
+
+| Paso # | AcciÃ³n esperada | Q1 â€” Â¿Sabe quÃ© hacer? | Q2 â€” Â¿Ve el control? | Q3 â€” Â¿Entiende causaâ†’efecto? | Q4 â€” Â¿Sistema confirma progreso? | FricciÃ³n detectada | Sev. | Captura Mobile (375px) | Captura Desktop (1440px) |
+|--------|-----------------|----------------------|---------------------|------------------------------|----------------------------------|--------------------|------|------------------------|--------------------------|
+| 4a | Valentina escanea las tarjetas de resultados y decide en cuÃ¡l entrar | **SÃ­** â€” entiende que debe revisar tarjetas y hacer clic en "Ver detalles" | Parcial â€” cada tarjeta muestra: imagen Â· badge opcional (varÃ­a por proyecto) Â· precio "Desde: $X *" Â· tipo Â· mÂ² Â· nombre Â· habitaciones Â· baÃ±os Â· ciudad Â· CTA. **Falta en todas:** estado del proyecto, conectividad de transporte. Chip VIS presente pero sin tooltip | **Parcial** â€” el precio domina visualmente en naranja grande antes que el nombre del proyecto. **El asterisco (*) aparece en TODAS las tarjetas pero su significado varÃ­a por proyecto** â€” en algunas significa "Precio Fijo", en otras muestra informaciÃ³n diferente. Valentina no sabe quÃ© significa en cada caso. Sin criterio visible de ordenamiento | **No** â€” sin contador de resultados. Agravante: algunos precios mostrados superan su presupuesto de $200M â€” confirma que el slider de 3b no permitiÃ³ fijar el lÃ­mite con precisiÃ³n â†’ [[F2/2.1/05_inventario-final#H-FILTROS-05]] | ðŸŸ  **Asterisco inconsistente entre tarjetas:** aparece en todas pero con significado distinto en cada proyecto. ðŸŸ  Precio domina sobre nombre â†’ [[F2/2.1/05_inventario-final#H-DETALLE-02]]. ðŸŸ  Chip VIS sin tooltip. ðŸŸ  Resultados fuera del presupuesto por imprecisiÃ³n del slider (3b). ðŸŸ  Sin estado del proyecto ni info de transporte | ðŸŸ  | ![[assets/filtros/H-FILTROS-1-SIN-CONTADOR-DE-RESULTADOS-MOBILE.png]] | ![[assets/filtros/H-FILTROS-1_SIN-CONTADOR-DE-RESULTADOS-WEB.png]] |
+| 4b | Valentina intenta comparar dos proyectos para decidir en cuÃ¡l entrar sin hacer clic | Parcial â€” entiende que debe revisar las tarjetas para elegir, pero la informaciÃ³n disponible no le permite descartar proyectos con confianza | **Desktop: SÃ­** â€” lista horizontal, tarjetas consistentes y visibles. **Mobile: SÃ­** â€” scroll vertical, mismo contenido. PresentaciÃ³n consistente entre tarjetas | **No** â€” las tarjetas no muestran los criterios que Valentina necesita para comparar: estado del proyecto, conectividad de transporte, fecha de entrega. Debe entrar a cada proyecto individualmente para obtener esa informaciÃ³n | **No** â€” no hay herramienta de comparaciÃ³n. Cada proyecto requiere un clic separado. Agravante: combinado con 3a (filtros no persistentes), cada vez que entra y vuelve pierde su posiciÃ³n y filtros â€” ciclo de fricciÃ³n acumulada | ðŸŸ  **Scanneabilidad insuficiente:** Valentina no puede comparar proyectos sin entrar a cada uno. Combinado con filtros no persistentes (3a), explorar varios proyectos implica rehacer la bÃºsqueda en cada regreso â†’ ciclo de fricciÃ³n que aumenta el abandono | ðŸŸ  | ![[assets/filtros/H-FILTROS-1-SIN-CONTADOR-DE-RESULTADOS-MOBILE.png]] | ![[assets/filtros/H-FILTROS-1_SIN-CONTADOR-DE-RESULTADOS-WEB.png]] |
+| 4c | Valentina aplica filtros que no devuelven resultados y necesita entender quÃ© pasÃ³ | **No** â€” no sabe quÃ© hacer. El sistema no la guÃ­a hacia ninguna acciÃ³n concreta | **No** â€” el mensaje "No se encuentra informaciÃ³n" aparece en gris abajo a la izquierda despuÃ©s de un Ã¡rea blanca vacÃ­a muy grande. **Mobile: el mensaje queda debajo del fold** â€” Valentina no puede saber a primera vista que no hay resultados, tiene que hacer scroll para descubrirlo. Desktop: visible tras un Ã¡rea en blanco extensa pero de muy bajo contraste y posiciÃ³n no esperada | **No** â€” el sistema no explica por quÃ© no hay resultados ni quÃ© filtro estÃ¡ siendo demasiado restrictivo. Valentina no sabe si es el precio, la ciudad, las habitaciones o la combinaciÃ³n | **No** â€” sin sugerencia de acciÃ³n. "Limpiar Filtros" existe en la barra pero no se destaca como soluciÃ³n. **NUEVO:** existen tabs "Todos / Disponibles / Vendidos" â€” Valentina podrÃ­a tener resultados en "Todos" sin saber que debe cambiar de tab | ðŸŸ  **Empty state invisible** (mobile: debajo del fold). ðŸŸ  **Tabs Todos/Disponibles/Vendidos sin contexto.** ðŸŸ¡ **Selector COP/USD/EUR:** ruido visual irrelevante para una compradora local â†’ [[F2/2.1/05_inventario-final#H-FILTROS-05]] | ðŸŸ  | ![[assets/filtros/H-FILTROS-05_ EMPTY-STATE-INVISIBLE-MOBILE.png]] | ![[Pasted image 20260520215647.png]] |
+| 4d | Valentina llega al final del listado filtrado y evalÃºa si vio todas las opciones disponibles | Parcial â€” ve que la lista termina pero no sabe si son todos los proyectos disponibles o si hay mÃ¡s que no cargaron | **No** â€” no hay indicador de total de resultados ("2 de 2 proyectos"). No hay paginaciÃ³n porque con filtros aplicados el promedio es ~2 proyectos por ciudad. Layout: desktop horizontal Â· mobile vertical scroll | **No** â€” al terminar los resultados filtrados aparece una secciÃ³n **"PodrÃ­an interesarte estas ofertas de otras ciudades"** sin separaciÃ³n visual clara. Valentina puede confundir estos proyectos de otras ciudades con resultados adicionales de BogotÃ¡ | **No** â€” el sistema no confirma que Valentina ya vio todas las opciones disponibles para su bÃºsqueda. La secciÃ³n de otras ciudades no aclara que los resultados de BogotÃ¡ se agotaron | ðŸŸ  **Sin confirmaciÃ³n de fin de resultados.** ðŸŸ  **SecciÃ³n "PodrÃ­an interesarte estas ofertas de otras ciudades" sin separaciÃ³n clara:** puede confundirse con mÃ¡s resultados de BogotÃ¡ | ðŸŸ  | ![[Pasted image 20260520220542.png]] | ![[Pasted image 20260520220516.png]] |
+
+---
+
+â†’ [[00_plantilla]] Â· [[02_punto-entrada]] Â· [[03_homepage]] Â· [[04_busqueda-filtros]] Â· [[06_detalle-proyecto]] Â· [[07_contacto]] Â· [[08_inventario-hallazgos]]

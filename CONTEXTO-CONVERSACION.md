@@ -13,7 +13,7 @@
 
 **Repositorio Git:** `DAVID13AGUILAR/Auditoria-Prodesa`, rama `main`.  
 **Vault Obsidian:** `C:\Users\David\OneDrive\Escritorio\PRODESA`  
-**Estado del repo:** El último push fue antes de empezar la fase 2.3. Todo lo de 2.3 y el archivo `research/CW-F2-importancia-cognitive-walkthrough.md` están solo en local — pendientes de commit/push cuando el usuario lo pida.
+**Estado del repo:** Main limpio y actualizado. Fases 2.1 y 2.4 completas y pusheadas. F2/2.3 no existe en el repo.
 
 ---
 
@@ -33,17 +33,21 @@ PRODESA/
 │   │   ├── H3B.md
 │   │   └── H3C.md
 │   ├── 2.2/                        ← Lo hace el compañero — NO TOCAR
-│   └── 2.3/                        ← Cognitive Walkthrough Flujo 2 (LOCAL, sin push)
-│       ├── 00_persona-valentina.md
-│       ├── 01_walkthrough-flujo2.md
-│       ├── 02_hallazgos-flujo2.md
-│       └── 03_analisis-detallado-flujo2.md
+│   ├── 2.3/                        ← NO existe en el repo (no fue commiteado)
+│   └── 2.4/                        ← Revisión WCAG 2.0 (COMPLETADA y pusheada via PR #1)
+│       ├── 00_plantilla.md
+│       ├── 01_homepage.md
+│       ├── 02_busqueda-filtros.md
+│       ├── 03_detalle-proyecto.md
+│       ├── 04_formulario-contacto.md
+│       ├── 05_inventario-final.md
+│       ├── 06_reporte-tarea-2.4.md
+│       └── CONTEXTO-NUEVO-CHAT.md
 └── research/
     ├── H-FORM-patrones-formulario-contacto.md
     ├── H-FORM-canales-contacto-omnicanalidad.md
     ├── H8-visibilidad-estado-proyecto.md
-    ├── H6-patrones-pagina-detalle-proyecto.md
-    └── CW-F2-importancia-cognitive-walkthrough.md   ← LOCAL, sin push
+    └── H6-patrones-pagina-detalle-proyecto.md
 ```
 
 ---
@@ -92,42 +96,39 @@ Metodología con 5 proyectos evaluados, 4 patrones de hallazgos, tabla de hipót
 
 ---
 
-## 4. Fase 2.3 — Cognitive Walkthrough Flujo 2 (completada, sin push)
+## 4. Fase 2.4 — Revisión de accesibilidad WCAG 2.0 (completada)
 
-**Persona:** Valentina Morales, 29 años, Bogotá-Suba, auxiliar administrativa, ~$2.4M/mes, Android Samsung Galaxy A, WhatsApp como canal preferido, primera compradora, evaluando proyecto Orizzo.
+**Páginas auditadas:** Homepage · Detalle (Siena) · Búsqueda/filtros · /contactanos  
+**Herramientas:** WAVE, inspección de headings en consola, navegación por teclado, validación manual  
+**Hipótesis:** H3B — CTAs ambiguos o insuficientemente prominentes
 
-**Tarea:** *"Contactar al asesor del proyecto Orizzo para recibir más información sobre el subsidio y el proceso de compra."*  
-**Punto de entrada:** `prodesa.com/proyecto-vivienda/bogota/orizzo`  
-**Dispositivos evaluados:** Desktop Chrome + Mobile Android
+**Total hallazgos: 46** (19 críticos / 15 importantes / 5 menores + 7 pendientes menores)  
+AIM Score WAVE: Homepage 5.8 · Siena 7.7 · /contactanos 6.0 (ninguna supera 8.0 real)
 
-### 01_walkthrough-flujo2.md — 15 pasos documentados
-Pasos críticos: paso 2 (sin CTA al terminar de leer), paso 5 (Teams en lugar de visita física), paso 6 (única ruta sin fricción — WhatsApp), pasos 8-9 (cédula obligatoria), paso 10 (teléfono inválido sin error), paso 11 (todos los errores al enviar), paso 14 (confirmación con correo y sin orientación), paso 15 (callejón sin salida).  
-Incluye tabla comparativa mobile vs desktop (5 diferencias).
+### Hallazgos clave
 
-### 02_hallazgos-flujo2.md — 11 hallazgos en 4 categorías
+| ID | Problema | Criterio |
+|----|----------|----------|
+| A-CONTACT-02 | 3 Broken ARIA references — bug React SPA: IDs dinámicos rotos entre re-renders | 4.1.2 A |
+| A-HOME-02 / A-CONTACT-05 | 39+ errores de contraste sistémicos (`color-naranja` y `color-gris`) | 1.4.3 AA |
+| A-DETALLE-01 / A-HOME-13 / A-CONTACT-01 | Jerarquía de headings rota en las 4 páginas (saltos H1→H6, H3→H6) | 1.3.1 A |
+| A-HOME-03 / A-CONTACT-06 | 6 empty buttons (íconos sin nombre accesible) — sistémico del design system | 4.1.2 A |
+| A-FORM-06 | Focus invisible en campo teléfono y tipo documento — inoperables por teclado | 2.4.7 / 2.1.1 |
+| A-FORM-08 | Campo teléfono combina indicativo (+57) y número sin instrucción | 3.3.2 A |
+| A-FORM-09 | Placeholder no desaparece al escribir — texto se solapa con el input | 1.4.3 A |
+| A-FORM-05 | Sin email/SMS de confirmación post-envío (también implicación Ley 1581 de 2012) | 4.1.3 AA |
 
-| ID | Severidad | Problema |
-|----|-----------|----------|
-| CW-F2-01 | 🔴 Crítico | CTA "Agenda tu cita en sala" promete visita física, entrega Teams |
-| CW-F2-02 | 🔴 Crítico | Confirmación muestra correo en lugar de nombre — privacidad + UX |
-| CW-F2-03 | 🟠 Importante | Errores en MAYÚSCULAS, genéricos |
-| CW-F2-04 | 🟠 Importante | Sin CTA de contacto al terminar "Acerca del proyecto" |
-| CW-F2-05 | 🔴 Crítico | Cédula obligatoria en primer contacto |
-| CW-F2-06 | 🔴 Crítico | Teléfono inválido pasa sin validación al CRM |
-| CW-F2-07 | 🟡 Menor | Scroll inesperado al hacer clic en "Déjanos tus datos" |
-| CW-F2-08 | 🔴 Crítico | Validación 100% post-submit |
-| CW-F2-09 | 🟠 Importante | Sin indicador de progreso ni check verde por campo |
-| CW-F2-10 | 🔴 Crítico | Confirmación sin canal, tiempo estimado ni CTA de respaldo |
-| CW-F2-11 | 🔴 Crítico | Pantalla de confirmación es callejón sin salida |
+**8 problemas sistémicos** afectan la totalidad del sitio.
 
-Total: 7 críticos, 3 importantes, 1 menor. Todos cross-referenciados con hallazgos de 2.1.
+**Nota técnica:** El formulario de contacto es un **embed de HubSpot** (`class="hs-input"`, IDs con GUID dinámico). Los problemas de labels, placeholders y foco no se resuelven con CSS — requieren configuración en HubSpot.
 
-### 03_analisis-detallado-flujo2.md
-Análisis narrativo: tres quiebres consecutivos del funnel (pasos 2, 5 y 14), por qué la cédula es un error estratégico, la validación del teléfono tiene dos víctimas (usuario y asesor), WhatsApp es la solución obvia pero está en el lugar equivocado del funnel. Tabla de priorización en dos olas.
+**Nota legal:** El formulario recolecta datos personales sin indicar propósito ni enviar confirmación — posible incumplimiento de la **Ley 1581 de 2012** (Colombia, Protección de Datos Personales).
+
+**Conclusión H3B:** Confirmada y ampliada. Los CTAs fallan no solo en prominencia visual sino en operabilidad para el ~15% de usuarios con discapacidad y para cualquier usuario que navega por teclado.
 
 ---
 
-## 5. Research (5 archivos)
+## 5. Research (4 archivos)
 
 | Archivo | Contenido |
 |---------|-----------|
@@ -135,7 +136,6 @@ Análisis narrativo: tres quiebres consecutivos del funnel (pasos 2, 5 y 14), po
 | `H-FORM-canales-contacto-omnicanalidad.md` | Estrategia omnicanal, CTAs engañosos (NN/G), reCAPTCHA -40% conversión (Stanford) |
 | `H8-visibilidad-estado-proyecto.md` | Heurística Nielsen #1, fases de proyecto colombiano, estado para calidad de leads |
 | `H6-patrones-pagina-detalle-proyecto.md` | Patrones de página de detalle, jerarquía visual, above the fold |
-| `CW-F2-importancia-cognitive-walkthrough.md` | CW vs HE, 81% abandono formularios, 0.4-1.2% conversión bienes raíces |
 
 ---
 
@@ -155,8 +155,8 @@ Análisis narrativo: tres quiebres consecutivos del funnel (pasos 2, 5 y 14), po
 
 ## 7. Qué sigue
 
-- **Tareas 2.4 y 2.5** — contenido desconocido. El usuario pegará el contenido desde Notion al inicio de la próxima sesión.
-- **Commit/push pendiente** de todo lo de 2.3 + `research/CW-F2-importancia-cognitive-walkthrough.md` cuando el usuario lo pida.
+- **Tarea 2.5 — Análisis de rendimiento (PageSpeed + GTmetrix)** — contenido desconocido. El usuario pegará el contenido desde Notion al inicio de la próxima sesión.
+- **F2/2.3** no existe en el repo — verificar con el usuario si es necesario crearlo o si fue descartado.
 - **El compañero** puede sincronizar haciendo pull del repo en cualquier momento.
 
 ---
