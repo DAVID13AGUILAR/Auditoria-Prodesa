@@ -16,6 +16,16 @@ aliases:
 
 ---
 
+## User Flow — CW Flujo 1
+
+> Flujo completo de Valentina anotado en FigJam — 6 etapas, 11 hallazgos críticos marcados.
+
+[Ver User Flow interactivo en FigJam](https://www.figma.com/board/5U9tc98wX5iqg0HbZ4q2xm/2.2-%E2%80%94-CW-Flujo-1-%E2%80%94-User-Flow-Anotado?node-id=0-1&t=cBGnGqMrHcOgwrHY-1)
+
+![[assets/user-flow/CW-Flujo1-User-Flow-Anotado.png]]
+
+---
+
 ## Pendiente completar
 
 - [ ] Secciones 5d, 5e, 5f (Detalle del proyecto)
